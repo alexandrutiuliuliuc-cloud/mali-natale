@@ -1,0 +1,185 @@
+{% comment %}
+  Renders collapsible sections with variant metafields for gift box product
+  
+  Usage:
+  {% render 'variant-metafields-collapsible', product: product %}
+{% endcomment %}
+
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+<div class="variant-metafields-container" data-variant-collapsibles>
+  
+  {% comment %} COLLAPSIBLE 1: Descrizione Variante {% endcomment %}
+  {%- if current_variant.metafields.custom.descrizione_variante != blank -%}
+    {% comment %} Separatore {% endcomment %}
+    <div data-separator="variant-1" not-quick-add>
+      <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
+    </div>
+    
+    <collapsible-section
+      class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+      data-accordion-set="pdp"
+      data-toggle-tabindex="button, [href], input, select"
+    >
+      <div
+        class="wt-collapse__trigger"
+        role="button"
+        tabindex="0"
+        data-open="false"
+        aria-expanded="false"
+        aria-controls="CollapsibleTab-descrizione-{{ current_variant.id }}"
+      >
+        <div class="wt-collapse__trigger__text">
+          <span class="wt-collapse__trigger__title">DESCRIZIONE</span>
+        </div>
+        <div class="wt-icon" aria-hidden="true">
+          {% render 'icons', id: 'plus' %}
+        </div>
+      </div>
+      <div class="wt-collapse__target" id="CollapsibleTab-descrizione-{{ current_variant.id }}">
+        <div class="wt-collapse__target--text rte" data-variant-content="descrizione">
+          {{ current_variant.metafields.custom.descrizione_variante | newline_to_br }}
+        </div>
+      </div>
+    </collapsible-section>
+  {%- endif -%}
+  
+  {% comment %} COLLAPSIBLE 2: Vasetto Sigillato {% endcomment %}
+  {%- if current_variant.metafields.custom.titolo_vasetto_sigillato != blank and current_variant.metafields.custom.vasetto_sigillato != blank -%}
+    {% comment %} Separatore {% endcomment %}
+    <div data-separator="variant-2" not-quick-add>
+      <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
+    </div>
+    
+    <collapsible-section
+      class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+      data-accordion-set="pdp"
+      data-toggle-tabindex="button, [href], input, select"
+    >
+      <div
+        class="wt-collapse__trigger"
+        role="button"
+        tabindex="0"
+        data-open="false"
+        aria-expanded="false"
+        aria-controls="CollapsibleTab-vasetto-{{ current_variant.id }}"
+      >
+        <div class="wt-collapse__trigger__text">
+          <span class="wt-collapse__trigger__title" data-variant-title="vasetto">
+            {{ current_variant.metafields.custom.titolo_vasetto_sigillato }}
+          </span>
+        </div>
+        <div class="wt-icon" aria-hidden="true">
+          {% render 'icons', id: 'plus' %}
+        </div>
+      </div>
+      <div class="wt-collapse__target" id="CollapsibleTab-vasetto-{{ current_variant.id }}">
+        <div class="wt-collapse__target--text rte" data-variant-content="vasetto">
+          {{ current_variant.metafields.custom.vasetto_sigillato | newline_to_br }}
+        </div>
+      </div>
+    </collapsible-section>
+  {%- endif -%}
+  
+  {% comment %} COLLAPSIBLE 3: Scatola Matite {% endcomment %}
+  {%- if current_variant.metafields.custom.scatola_matite != blank -%}
+    {% comment %} Separatore {% endcomment %}
+    <div data-separator="variant-3" not-quick-add>
+      <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
+    </div>
+    
+    <collapsible-section
+      class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+      data-accordion-set="pdp"
+      data-toggle-tabindex="button, [href], input, select"
+    >
+      <div
+        class="wt-collapse__trigger"
+        role="button"
+        tabindex="0"
+        data-open="false"
+        aria-expanded="false"
+        aria-controls="CollapsibleTab-matite-{{ current_variant.id }}"
+      >
+        <div class="wt-collapse__trigger__text">
+          <span class="wt-collapse__trigger__title">1 SCATOLA MATITE DI CIOCCOLATO FONDENTE E NOCCIOLA – 60 g</span>
+        </div>
+        <div class="wt-icon" aria-hidden="true">
+          {% render 'icons', id: 'plus' %}
+        </div>
+      </div>
+      <div class="wt-collapse__target" id="CollapsibleTab-matite-{{ current_variant.id }}">
+        <div class="wt-collapse__target--text rte" data-variant-content="matite">
+          {{ current_variant.metafields.custom.scatola_matite | newline_to_br }}
+        </div>
+      </div>
+    </collapsible-section>
+  {%- endif -%}
+</div>
+
+{% comment %} Script per aggiornare i metafield quando cambia la variante {% endcomment %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const variantMetafields = {{ product.variants | json }}.reduce((acc, variant) => {
+    acc[variant.id] = {
+      descrizione: variant.metafields?.custom?.descrizione_variante || '',
+      titoloVasetto: variant.metafields?.custom?.titolo_vasetto_sigillato || '',
+      vasetto: variant.metafields?.custom?.vasetto_sigillato || '',
+      matite: variant.metafields?.custom?.scatola_matite || ''
+    };
+    return acc;
+  }, {});
+
+  function updateVariantCollapsibles(variantId) {
+    const data = variantMetafields[variantId];
+    if (!data) return;
+
+    // Aggiorna descrizione
+    const descrizioneEl = document.querySelector('[data-variant-content="descrizione"]');
+    if (descrizioneEl && data.descrizione) {
+      descrizioneEl.innerHTML = data.descrizione.replace(/\n/g, '<br>');
+    }
+
+    // Aggiorna titolo vasetto
+    const titoloVasettoEl = document.querySelector('[data-variant-title="vasetto"]');
+    if (titoloVasettoEl && data.titoloVasetto) {
+      titoloVasettoEl.textContent = data.titoloVasetto;
+    }
+
+    // Aggiorna contenuto vasetto
+    const vasettoEl = document.querySelector('[data-variant-content="vasetto"]');
+    if (vasettoEl && data.vasetto) {
+      vasettoEl.innerHTML = data.vasetto.replace(/\n/g, '<br>');
+    }
+
+    // Aggiorna matite
+    const matiteEl = document.querySelector('[data-variant-content="matite"]');
+    if (matiteEl && data.matite) {
+      matiteEl.innerHTML = data.matite.replace(/\n/g, '<br>');
+    }
+  }
+
+  // Ascolta i cambiamenti di variante
+  document.addEventListener('variant:change', function(event) {
+    if (event.detail && event.detail.variant) {
+      updateVariantCollapsibles(event.detail.variant.id);
+    }
+  });
+
+  // Listener per input radio (variant picker buttons)
+  document.querySelectorAll('input[name="id"]').forEach(function(input) {
+    input.addEventListener('change', function() {
+      updateVariantCollapsibles(parseInt(this.value));
+    });
+  });
+
+  // Listener per select dropdown
+  const variantSelect = document.querySelector('select[name="id"]');
+  if (variantSelect) {
+    variantSelect.addEventListener('change', function() {
+      updateVariantCollapsibles(parseInt(this.value));
+    });
+  }
+});
+</script>
+

@@ -1,0 +1,82 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "page-footer",
+      "blocks": {
+        "image_rDX4Jb": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Logo_Mali_Milano-bianco-09.png",
+            "image-width": 180
+          }
+        },
+        "text_JtUjig": {
+          "type": "text",
+          "settings": {
+            "heading_text": "SU DI NOI",
+            "text": "<p>RAG. SOCIALE: Suite s.r.l.<strong><br/></strong>INDIRIZZO: Via Privata Terenzio Mamiani 5, Milano<br/>P. IVA:<strong> </strong>11487320969<br/>E-MAIL: info@malimilano.it<br/>NUM. TELEFONO: +39 340 763 0727</p>"
+          }
+        },
+        "menu_g8gLjt": {
+          "type": "menu",
+          "settings": {
+            "heading_links": "MENU",
+            "links": "footer-menu-2"
+          }
+        },
+        "menu_GzMLqf": {
+          "type": "menu",
+          "settings": {
+            "heading_links": "LINK VELOCI",
+            "links": "info"
+          }
+        },
+        "newsletter_hfQnCQ": {
+          "type": "newsletter",
+          "settings": {
+            "heading_newsletter": "UN DOLCE BENVENUTO",
+            "text_newsletter": "<p>Iscriviti per scoprire offerte e novità golose!</p>",
+            "button_type": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "image_rDX4Jb",
+        "text_JtUjig",
+        "menu_g8gLjt",
+        "menu_GzMLqf",
+        "newsletter_hfQnCQ"
+      ],
+      "custom_css": [
+        ".wt-newsletter__send.wt-newsletter__send--primary {background-color: #fff8db; color: #99623f; /* Colore di sfondo giallo */}",
+        ".disclosure__button.localization-form__select.localization-selector {background-color: white; /* Imposta il background bianco */ color: #99623f; /* Imposta il colore del testo marrone */}"
+      ],
+      "settings": {
+        "show-social-media-icons": true,
+        "show-language-selector": true,
+        "show-country_region_selector": true,
+        "enable_follow_on_shop": true,
+        "show-payments-icons": true,
+        "show-copyright": true,
+        "text": "© 2024 Tutti i diritti sono riservati.",
+        "big-logo-width": 87,
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

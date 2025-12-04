@@ -1,0 +1,485 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "settings": {
+        "full-width-enabled": true,
+        "text_color": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 36,
+        "margin-bottom": 28
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "brand": "{{ product.vendor }}",
+            "size_text": 210,
+            "size_text_mobile": 200
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "90ea3cd3-aa22-44f6-b6de-365eb7f85b9c": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#ffffff",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_included": true,
+            "size_text": 130,
+            "size_text_mobile": 120
+          }
+        },
+        "text_ynFNpB": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "content": "<p>CONFEZIONE DA 400 ml</p>",
+            "page": ""
+          }
+        },
+        "separator_RrKQ4A": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#ffffff",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "color_swatch_names": "",
+            "variant_picture_swatch_names": "",
+            "dropdown_swatch_names": "",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#ffffff",
+            "margin-top": 8,
+            "margin-bottom": 16
+          }
+        },
+        "inventory_JWQnXt": {
+          "type": "inventory",
+          "settings": {
+            "inventory_threshold": 10,
+            "show_inventory_quantity": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "show_qty_selector": true
+          }
+        },
+        "separator_HcYGiH": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_open": false,
+            "icon": "none"
+          }
+        },
+        "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "collapsible_tab_Q7UFgL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Cosa amerai?",
+            "content": "{{ product.metafields.custom.cosa_amerai | metafield_tag }}",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "separator_gDwzxi": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "collapsible_tab_aD76Mx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Come si usa?",
+            "content": "{{ product.metafields.custom.come_si_usa | metafield_tag }}",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "separator_gGN7jF": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "collapsible_tab_H9KpPX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredienti",
+            "content": "{{ product.metafields.custom.ingredienti | metafield_tag }}",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "separator_bV8m3A": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "collapsible_tab_pWiWBA": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Customer Care",
+            "content": "<p>Hai domande? Offriamo assistenza dal lunedì al venerdì dalle 8:00 alle 17:00 via e-mail a info@malimilano.it o tramite telefono al +39 340 763 0727</p>",
+            "page": "",
+            "icon": "none"
+          }
+        },
+        "separator_LkpgxB": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "share_buttons_Ct9CXx": {
+          "type": "share_buttons",
+          "settings": {
+            "heading": "Condividi",
+            "social_facebook_link": true,
+            "social_twitter_link": true,
+            "social_pinterest_link": true,
+            "social_whatsapp_link": true,
+            "mail_link": true
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "rating",
+        "90ea3cd3-aa22-44f6-b6de-365eb7f85b9c",
+        "price",
+        "text_ynFNpB",
+        "separator_RrKQ4A",
+        "variant_picker",
+        "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e",
+        "inventory_JWQnXt",
+        "buy_buttons",
+        "separator_HcYGiH",
+        "description",
+        "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d",
+        "collapsible_tab_Q7UFgL",
+        "separator_gDwzxi",
+        "collapsible_tab_aD76Mx",
+        "separator_gGN7jF",
+        "collapsible_tab_H9KpPX",
+        "separator_bV8m3A",
+        "collapsible_tab_pWiWBA",
+        "separator_LkpgxB",
+        "share_buttons_Ct9CXx"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.wt-collapse__trigger__title {font-size: 22px; } .wt-product__upsell__headline {font-size: 18px; } h1 {font-size: 43px; }}",
+        "@media (max-width: 768px) {h1 {font-size: 30px; } .wt-collapse__trigger__title {font-size: 20px; } .wt-product__upsell__headline {font-size: 16px; }}"
+      ],
+      "settings": {
+        "full-width-enabled": false,
+        "desktop-media-size": "normal",
+        "desktop-layout": "carousel-horizontal",
+        "desktop-image-ratio": "original",
+        "enable_video_looping": true,
+        "enable-preselected-variant": true,
+        "enable-image-zoom": true,
+        "mobile-image": "normal",
+        "margin-top": 12,
+        "margin-bottom": 48
+      }
+    },
+    "features_banner_wiKkaQ": {
+      "type": "features-banner",
+      "blocks": {
+        "image_P4yL64": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/delivery_1.png",
+            "select_icon": "bag",
+            "heading": "Spedizioni Sicure e Veloci",
+            "text": "<p>Garantiamo consegne rapide e sicure, affinché tu possa godere dei nostri prodotti senza attese e preoccupazioni.</p>"
+          }
+        },
+        "image_m7jjzm": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/wallet_1_1.png",
+            "select_icon": "user",
+            "heading": "Pagamenti Sicuri",
+            "text": "<p>Il tuo acquisto è protetto da sistemi di pagamento sicuri, per una transazione senza rischi e totale tranquillità.</p>"
+          }
+        },
+        "image_AkKWrq": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/wedding-cake_1.png",
+            "select_icon": "search",
+            "heading": "Gourmand Bodycare",
+            "text": "<p>Ogni prodotto è una coccola per i sensi, unendo il piacere della pasticceria alla funzionalità di una skincare che dona risultati visibili.</p>"
+          }
+        },
+        "image_XPgaAR": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/leaf_1.png",
+            "select_icon": "star",
+            "heading": "Ingredienti Pregiati",
+            "text": "<p>Selezioniamo solo ingredienti pregiati di alta qualità, per garantire trattamenti che rispettano la pelle e la rendono luminosa e sana.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_P4yL64",
+        "image_m7jjzm",
+        "image_AkKWrq",
+        "image_XPgaAR"
+      ],
+      "settings": {
+        "heading": "",
+        "size_heading": 100,
+        "size_heading_mobile": 120,
+        "icon_layout": "center",
+        "color_body_icon": "rgba(0,0,0,0)",
+        "color_body_text": "rgba(0,0,0,0)",
+        "background_color": "#fff8db",
+        "icon_layout_mobile": "slider",
+        "margin-top": 44,
+        "margin-bottom": 48
+      }
+    },
+    "benefits_product_eCwRhc": {
+      "type": "benefits-product",
+      "blocks": {
+        "benefit_hRc43B": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Progetto_senza_titolo_44_503edf7b-b24e-4f1b-983f-85018a4bbd2d.png",
+            "item_heading": "Lampone Artico",
+            "text": "<p>Ricco di antiossidanti, il lampone artico lenisce e rigenera la pelle, donando luminosità e freschezza.</p>"
+          }
+        },
+        "benefit_agDb3i": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Burro_corpo_limone.png",
+            "item_heading": "Limone di Mentone e Basilico Thai",
+            "text": "<p>Un mix rinfrescante di limone e basilico che stimola e tonifica la pelle, lasciandola fresca e profumata.</p>"
+          }
+        },
+        "benefit_xbrnGF": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Scrub_corpo_lime.png",
+            "item_heading": "Lime di Tahiti",
+            "text": "<p>Fresco e vivace, il Lime di Tahiti rivitalizza la pelle con un tocco energetico e un profumo avvolgente.</p>"
+          }
+        },
+        "benefit_wmTQB7": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Doccia_crema_Albicocca.png",
+            "item_heading": "Albicocca di Bergeron",
+            "text": "<p>Ricca di nutrienti, l'Albicocca di Bergeron idrata e rigenera la pelle, lasciandola morbida e luminosa.</p>"
+          }
+        },
+        "benefit_wxFQzp": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Doccia_Crema_Pompelmo.png",
+            "item_heading": "Pompelmo Rosa delle Barbados",
+            "text": "<p>Con le sue proprietà tonificanti, il Pompelmo Rosa delle Barbados rende la pelle fresca e tonica, con una fragranza frizzante.</p>"
+          }
+        },
+        "benefit_ByxYrm": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Burro_corpo_Cacao.png",
+            "item_heading": "Caffè Blu e Cacao Criollo",
+            "text": "<p>Un’accoppiata perfetta di caffè e cacao, che stimola e nutre la pelle con un profumo ricco e avvolgente.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_hRc43B",
+        "benefit_agDb3i",
+        "benefit_xbrnGF",
+        "benefit_wmTQB7",
+        "benefit_wxFQzp",
+        "benefit_ByxYrm"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 30px; }}",
+        "@media (min-width: 768px) {h3 {font-size: 26px; }}",
+        "@media (max-width: 768px) {h3 {font-size: 21px; }}"
+      ],
+      "settings": {
+        "heading": "Le nostre Fragranze",
+        "full-width-enabled": false,
+        "desktop_image": "shopify://shop_images/DSC09975-Edit_copy.jpg",
+        "desktop_width": 60,
+        "desktop_max_width": 680,
+        "button_label": "",
+        "button_link": "",
+        "quick_buy_product": "",
+        "button_select": "primary",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "color-body-heading": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "margin-top": 52,
+        "margin-bottom": 132
+      }
+    },
+    "image_with_text_6eHa6t": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_D3AMnB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dove la Bellezza Incontra il Piacere",
+            "disable_on_mobile": false,
+            "size_heading": 140,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_m4Jtpa": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Malí trasforma la cura della pelle in un dolce viaggio sensoriale. I nostri prodotti uniscono fragranze golose e texture avvolgenti, ispirate alla pasticceria, per offrirti un piacere che coinvolge tutti i sensi. Con ingredienti naturali e una passione per la bellezza, ogni momento di cura diventa una dolce coccola per te.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_D3AMnB",
+        "text_m4Jtpa"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {h2 {font-size: 30px; }}"
+      ],
+      "settings": {
+        "title": "",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": false,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 440,
+        "mobile_fixed_height": 280,
+        "section-color-body-text": "rgba(0,0,0,0)",
+        "section-color-overlay": "#fff8db",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "desktop_image": "shopify://shop_images/DSC00238-Edit_copy.jpg",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 72,
+        "margin-bottom": 60
+      }
+    },
+    "product_recommendations_ACmPwK": {
+      "type": "product-recommendations",
+      "custom_css": [
+        "@media (max-width: 768px) {h2 {font-size: 28px; }}",
+        "@media (min-width: 768px) {h2 {font-size: 45px; }}"
+      ],
+      "settings": {
+        "heading": "Ti potrebbe anche interessare",
+        "disable_on_mobile": false,
+        "products_to_show": 4,
+        "number_of_column_desktop": 4,
+        "make_products_full_width": true,
+        "show_secondary_image_on_hover": true,
+        "number_of_column_mobile": 2.1,
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_vendor": true,
+        "show_product_rating": false,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fef3f4",
+        "margin-top": 52,
+        "margin-bottom": 52
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "features_banner_wiKkaQ",
+    "benefits_product_eCwRhc",
+    "image_with_text_6eHa6t",
+    "product_recommendations_ACmPwK"
+  ]
+}
