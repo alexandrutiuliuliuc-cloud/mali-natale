@@ -113,44 +113,9 @@
             "margin-bottom": 0
           }
         },
-        "variant_description_block": {
-          "type": "variant_description",
+        "variant_giftpack_info_block": {
+          "type": "variant_giftpack_info",
           "settings": {}
-        },
-        "separator_desc": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": true,
-            "color-background": "#dedede",
-            "margin-top": 0,
-            "margin-bottom": 0
-          }
-        },
-        "variant_jar_block": {
-          "type": "variant_jar",
-          "settings": {}
-        },
-        "separator_jar": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": true,
-            "color-background": "#dedede",
-            "margin-top": 0,
-            "margin-bottom": 0
-          }
-        },
-        "variant_chocolate_block": {
-          "type": "variant_chocolate",
-          "settings": {}
-        },
-        "separator_chocolate": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": true,
-            "color-background": "#dedede",
-            "margin-top": 0,
-            "margin-bottom": 0
-          }
         },
         "collapsible_tab_pWiWBA": {
           "type": "collapsible_tab",
@@ -194,12 +159,7 @@
         "inventory_JWQnXt",
         "buy_buttons",
         "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d",
-        "variant_description_block",
-        "separator_desc",
-        "variant_jar_block",
-        "separator_jar",
-        "variant_chocolate_block",
-        "separator_chocolate",
+        "variant_giftpack_info_block",
         "collapsible_tab_pWiWBA",
         "separator_LkpgxB",
         "share_buttons_Ct9CXx"
