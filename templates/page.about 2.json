@@ -1,0 +1,164 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0
+      }
+    },
+    "rich_text_YFMzLp": {
+      "type": "rich-text",
+      "blocks": {
+        "text_Yx3MUG": {
+          "type": "text",
+          "settings": {
+            "text": "<h1>Siamo Malì, un brand nato dall’amore per la bellezza e la dolcezza. Crediamo che prendersi cura di sé possa (e debba) essere un’esperienza golosa: profumi che ricordano i dessert più prelibati e ingredienti naturali che coccolano la pelle.</h1>",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "text_Yx3MUG"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {h1 {font-size: 27px; }}"
+      ],
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 12
+      }
+    },
+    "multicolumn_3PLYeM": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_katJeH": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/DSC00153-Edit_copy3.jpg"
+          }
+        },
+        "column_CQnbbY": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/DSC00136-Edit_copy.jpg"
+          }
+        },
+        "column_BzE8Qa": {
+          "type": "column",
+          "settings": {
+            "heading": "",
+            "heading_disable_on_mobile": false,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/DSC00138-Edit_copy2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "column_katJeH",
+        "column_CQnbbY",
+        "column_BzE8Qa"
+      ],
+      "settings": {
+        "heading": "",
+        "swipe_on_mobile": false,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fff8db",
+        "margin-top": 64,
+        "margin-bottom": 60
+      }
+    },
+    "parallax_BxGYLh": {
+      "type": "parallax",
+      "blocks": {
+        "heading_a7myTU": {
+          "type": "heading",
+          "settings": {
+            "heading": "La Filosofia di Malì",
+            "disable_on_mobile": false,
+            "size_heading": 280,
+            "size_heading_mobile": 170
+          }
+        },
+        "text_KgQCPm": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Ogni nostro prodotto è pensato per regalarti un rituale di pura felicità: una pausa soffice, profumata e nutriente. Dietro ogni ricetta Malì c’è passione, ricerca e un pizzico di magia. Del resto, non è un caso che i momenti più belli siano spesso accompagnati da un dolce profumo.</h3>",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_a7myTU",
+        "text_KgQCPm"
+      ],
+      "settings": {
+        "desktop_text_horizontal_position": "center",
+        "rotation": 5,
+        "image_1": "shopify://shop_images/DSC00264-Edit_copy.jpg",
+        "button_link1": "",
+        "image_2": "shopify://shop_images/DSC00301-Edit_copy_3.jpg",
+        "button_link2": "",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 20,
+        "margin-bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_YFMzLp",
+    "multicolumn_3PLYeM",
+    "parallax_BxGYLh"
+  ]
+}

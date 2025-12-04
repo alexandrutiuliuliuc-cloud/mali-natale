@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-bg-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0
+      }
+    },
+    "rich_text_NUM34E": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_bkH9A6": {
+          "type": "heading",
+          "settings": {
+            "heading": "BODY CARE",
+            "disable_on_mobile": false,
+            "size_heading": 180,
+            "size_heading_mobile": 150
+          }
+        }
+      },
+      "block_order": [
+        "heading_bkH9A6"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fdf5da",
+        "margin-top": 36,
+        "margin-bottom": 0
+      }
+    },
+    "grid_view_i3Q4Lt": {
+      "type": "grid-view",
+      "blocks": {
+        "image_Kjcmnn": {
+          "type": "image",
+          "settings": {
+            "heading": "Doccia Crema",
+            "heading_disable_on_mobile": false,
+            "size_heading": 180,
+            "size_heading_mobile": 150,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "SCOPRI ORA",
+            "button_disable_on_mobile": false,
+            "button_link": "shopify://collections/doccia-crema",
+            "button_link_in_new_window": false,
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "#816642",
+            "color-overlay-opacity": 35,
+            "desktop_image": "shopify://shop_images/DSC00115-Edit_copy3.jpg",
+            "desktop_text_vertical_position": "bottom",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "bottom",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_NNFGjR": {
+          "type": "image",
+          "settings": {
+            "heading": "Scrub Corpo",
+            "heading_disable_on_mobile": false,
+            "size_heading": 180,
+            "size_heading_mobile": 150,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "SCOPRI ORA",
+            "button_disable_on_mobile": false,
+            "button_link": "shopify://collections/scrub-corpo",
+            "button_link_in_new_window": false,
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "#816642",
+            "color-overlay-opacity": 35,
+            "desktop_image": "shopify://shop_images/DSC00111-Edit_copy4.jpg",
+            "desktop_text_vertical_position": "bottom",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "bottom",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_D87hJr": {
+          "type": "image",
+          "settings": {
+            "heading": "Burro Corpo",
+            "heading_disable_on_mobile": false,
+            "size_heading": 180,
+            "size_heading_mobile": 150,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "SCOPRI ORA",
+            "button_disable_on_mobile": false,
+            "button_link": "shopify://collections/burro-corpo",
+            "button_link_in_new_window": false,
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "#816642",
+            "color-overlay-opacity": 35,
+            "desktop_image": "shopify://shop_images/DSC00107-Edit_copy4.jpg",
+            "desktop_text_vertical_position": "bottom",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "bottom",
+            "mobile_text_horizontal_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_Kjcmnn",
+        "image_NNFGjR",
+        "image_D87hJr"
+      ],
+      "settings": {
+        "title": "",
+        "swipe_on_mobile": false,
+        "full-width-enabled": false,
+        "image_ratio": "portrait",
+        "color-body-text": "#ffffff",
+        "background_color": "#fcf5d9",
+        "margin-top": 16,
+        "margin-bottom": 72
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_NUM34E",
+    "grid_view_i3Q4Lt"
+  ]
+}

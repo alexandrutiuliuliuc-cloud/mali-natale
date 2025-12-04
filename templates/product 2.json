@@ -104,6 +104,22 @@
             "show_qty_selector": true
           }
         },
+        "separator_HcYGiH": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_open": false,
+            "icon": "none"
+          }
+        },
         "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d": {
           "type": "separator",
           "settings": {
@@ -113,11 +129,16 @@
             "margin-bottom": 0
           }
         },
-        "variant_description_block": {
-          "type": "variant_description",
-          "settings": {}
+        "collapsible_tab_Q7UFgL": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Cosa amerai?",
+            "content": "{{ product.metafields.custom.cosa_amerai | metafield_tag }}",
+            "page": "",
+            "icon": "none"
+          }
         },
-        "separator_desc": {
+        "separator_gDwzxi": {
           "type": "separator",
           "settings": {
             "show-separator-line": true,
@@ -126,11 +147,16 @@
             "margin-bottom": 0
           }
         },
-        "variant_jar_block": {
-          "type": "variant_jar",
-          "settings": {}
+        "collapsible_tab_aD76Mx": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Come si usa?",
+            "content": "{{ product.metafields.custom.come_si_usa | metafield_tag }}",
+            "page": "",
+            "icon": "none"
+          }
         },
-        "separator_jar": {
+        "separator_gGN7jF": {
           "type": "separator",
           "settings": {
             "show-separator-line": true,
@@ -139,11 +165,16 @@
             "margin-bottom": 0
           }
         },
-        "variant_chocolate_block": {
-          "type": "variant_chocolate",
-          "settings": {}
+        "collapsible_tab_H9KpPX": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredienti",
+            "content": "{{ product.metafields.custom.ingredienti | metafield_tag }}",
+            "page": "",
+            "icon": "none"
+          }
         },
-        "separator_chocolate": {
+        "separator_bV8m3A": {
           "type": "separator",
           "settings": {
             "show-separator-line": true,
@@ -193,13 +224,15 @@
         "c1ba8695-94d2-40ad-ac06-93ec3b8cf38e",
         "inventory_JWQnXt",
         "buy_buttons",
+        "separator_HcYGiH",
+        "description",
         "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d",
-        "variant_description_block",
-        "separator_desc",
-        "variant_jar_block",
-        "separator_jar",
-        "variant_chocolate_block",
-        "separator_chocolate",
+        "collapsible_tab_Q7UFgL",
+        "separator_gDwzxi",
+        "collapsible_tab_aD76Mx",
+        "separator_gGN7jF",
+        "collapsible_tab_H9KpPX",
+        "separator_bV8m3A",
         "collapsible_tab_pWiWBA",
         "separator_LkpgxB",
         "share_buttons_Ct9CXx"

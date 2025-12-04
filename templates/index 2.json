@@ -1,0 +1,830 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rich_text_with_image_d9iPb9": {
+      "type": "rich-text-with-image",
+      "blocks": {
+        "text_yXHg9h": {
+          "type": "text",
+          "settings": {
+            "text": "Come un dolce gourmand appena sfornato, PICTURE1 ma senza zuccheri, grassi o calorie: PICTURE2 ogni prodotto bodycare di Malì è una coccola senza peccato per la tua pelle e il tuo benessere fisico e mentale. PICTURE3",
+            "font_uppercase": "none",
+            "disable_on_mobile": false,
+            "size_heading": 90,
+            "size_heading_mobile": 80,
+            "line_height": 1.5,
+            "picture1": "shopify://shop_images/DSC00025_1.jpg",
+            "button_link1": "",
+            "picture2": "shopify://shop_images/DSC00252-Edit_copy_2_1.jpg",
+            "button_link2": "",
+            "picture3": "shopify://shop_images/DSC00352-Edit_copy2.jpg",
+            "button_link3": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_yXHg9h"
+      ],
+      "settings": {
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "rgba(0,0,0,0)",
+        "margin-top": 32,
+        "margin-bottom": 32
+      }
+    },
+    "grid_view_PEBP9T": {
+      "type": "grid-view",
+      "blocks": {
+        "image_brGECK": {
+          "type": "image",
+          "settings": {
+            "heading": "Doccia Crema",
+            "heading_disable_on_mobile": false,
+            "size_heading": 180,
+            "size_heading_mobile": 150,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "SCOPRI ORA",
+            "button_disable_on_mobile": false,
+            "button_link": "shopify://collections/doccia-crema",
+            "button_link_in_new_window": false,
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "#816642",
+            "color-overlay-opacity": 35,
+            "desktop_image": "shopify://shop_images/DSC00115-Edit_copy3.jpg",
+            "desktop_text_vertical_position": "bottom",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "bottom",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_KkY64J": {
+          "type": "image",
+          "settings": {
+            "heading": "Scrub Corpo",
+            "heading_disable_on_mobile": false,
+            "size_heading": 180,
+            "size_heading_mobile": 150,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "SCOPRI ORA",
+            "button_disable_on_mobile": false,
+            "button_link": "shopify://collections/scrub-corpo",
+            "button_link_in_new_window": false,
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "#816642",
+            "color-overlay-opacity": 35,
+            "desktop_image": "shopify://shop_images/DSC00111-Edit_copy4.jpg",
+            "desktop_text_vertical_position": "bottom",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "bottom",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_dkHG7f": {
+          "type": "image",
+          "settings": {
+            "heading": "Burro Corpo",
+            "heading_disable_on_mobile": false,
+            "size_heading": 180,
+            "size_heading_mobile": 150,
+            "text": "",
+            "text_disable_on_mobile": false,
+            "button_select": "link",
+            "button_label": "SCOPRI ORA",
+            "button_disable_on_mobile": false,
+            "button_link": "shopify://collections/burro-corpo",
+            "button_link_in_new_window": false,
+            "color-body-text": "rgba(0,0,0,0)",
+            "color-overlay": "#816642",
+            "color-overlay-opacity": 35,
+            "desktop_image": "shopify://shop_images/DSC00107-Edit_copy4.jpg",
+            "desktop_text_vertical_position": "bottom",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "bottom",
+            "mobile_text_horizontal_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_brGECK",
+        "image_KkY64J",
+        "image_dkHG7f"
+      ],
+      "settings": {
+        "title": "",
+        "swipe_on_mobile": false,
+        "full-width-enabled": false,
+        "image_ratio": "portrait",
+        "color-body-text": "#ffffff",
+        "background_color": "#fcf5d9",
+        "margin-top": 72,
+        "margin-bottom": 72
+      }
+    },
+    "parallax_9pNgNx": {
+      "type": "parallax",
+      "blocks": {
+        "heading_QUKcCw": {
+          "type": "heading",
+          "settings": {
+            "heading": "Un dolce piacere senza peccato",
+            "disable_on_mobile": false,
+            "size_heading": 280,
+            "size_heading_mobile": 190
+          }
+        },
+        "text_mWnmEE": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Lasciati avvolgere dalle nostre fragranze dolci e ricercate, e scopri i prodotti bodycare Malì: cremosi come cioccolato gourmand e creati con ingredienti premium per il benessere del tuo corpo e della tua mente.</h3>",
+            "disable_on_mobile": false
+          }
+        },
+        "button_RfzTFC": {
+          "type": "button",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "SCOPRI MALÌ",
+            "button_link": "shopify://pages/about",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_QUKcCw",
+        "text_mWnmEE",
+        "button_RfzTFC"
+      ],
+      "custom_css": [],
+      "settings": {
+        "desktop_text_horizontal_position": "center",
+        "rotation": 12,
+        "image_1": "shopify://shop_images/DSC00131_1.jpg",
+        "button_link1": "",
+        "image_2": "shopify://shop_images/pompelmo_aggiornato_2.jpg",
+        "button_link2": "",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fff5f6",
+        "margin-top": 0,
+        "margin-bottom": 0
+      }
+    },
+    "brands_GxCy3w": {
+      "type": "brands",
+      "blocks": {
+        "image_eJfTRn": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Progetto_senza_titolo_44.png",
+            "link": ""
+          }
+        },
+        "image_wFcCxe": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Burro_corpo_lime.png",
+            "link": ""
+          }
+        },
+        "image_3qwFWN": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Scrub_Albicocca.png",
+            "link": ""
+          }
+        },
+        "image_QdEbUw": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Scrub_limone.png",
+            "link": ""
+          }
+        },
+        "image_gNY4AT": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Scrub_corpo_lime.png",
+            "link": ""
+          }
+        },
+        "image_zydkq6": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Scrub_Cacao_1.png",
+            "link": ""
+          }
+        },
+        "image_QJbPTi": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Burro_corpo_Cacao.png",
+            "link": ""
+          }
+        },
+        "image_hfb3Qt": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Burro_corpo_limone.png",
+            "link": ""
+          }
+        },
+        "image_Mm3EyX": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Doccia_lampone.png",
+            "link": ""
+          }
+        },
+        "image_F7z8KD": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Burro_corpo_Albicocca.png",
+            "link": ""
+          }
+        },
+        "image_fJX4UG": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Scrub_Pompelmo.png",
+            "link": ""
+          }
+        },
+        "image_BJ7yWc": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Doccia_crema_limone.png",
+            "link": ""
+          }
+        },
+        "image_a7LQPW": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Doccia_crema_Albicocca.png",
+            "link": ""
+          }
+        },
+        "image_cxBEAR": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Doccia_crema_lime.png",
+            "link": ""
+          }
+        },
+        "image_PHqJEH": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Doccia_crema_Cacao.png",
+            "link": ""
+          }
+        },
+        "image_NV6C8R": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Burro_corpo_lampone.png",
+            "link": ""
+          }
+        },
+        "image_kfxaxw": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Texture-_Burro_corpo_lime.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_eJfTRn",
+        "image_wFcCxe",
+        "image_3qwFWN",
+        "image_QdEbUw",
+        "image_gNY4AT",
+        "image_zydkq6",
+        "image_QJbPTi",
+        "image_hfb3Qt",
+        "image_Mm3EyX",
+        "image_F7z8KD",
+        "image_fJX4UG",
+        "image_BJ7yWc",
+        "image_a7LQPW",
+        "image_cxBEAR",
+        "image_PHqJEH",
+        "image_NV6C8R",
+        "image_kfxaxw"
+      ],
+      "settings": {
+        "heading": "",
+        "animation": "marquee",
+        "animation_speed": "150",
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fff5f6",
+        "margin-top": 0,
+        "margin-bottom": 24
+      }
+    },
+    "shoppable_image_h9RWfB": {
+      "type": "shoppable-image",
+      "blocks": {
+        "dots_hRfbJq": {
+          "type": "dots",
+          "settings": {
+            "coordinate_width": 53,
+            "coordinate_height": 26,
+            "coordinate_width_mobile": 45,
+            "coordinate_height_mobile": 32,
+            "featured_product": "crema-doccia-caffe-blu-e-cacao-criollo"
+          }
+        },
+        "dots_dawm3h": {
+          "type": "dots",
+          "settings": {
+            "coordinate_width": 73,
+            "coordinate_height": 19,
+            "coordinate_width_mobile": 75,
+            "coordinate_height_mobile": 29,
+            "featured_product": "scrub-cioccolato"
+          }
+        },
+        "dots_YVxVVp": {
+          "type": "dots",
+          "settings": {
+            "coordinate_width": 36,
+            "coordinate_height": 56,
+            "coordinate_width_mobile": 23,
+            "coordinate_height_mobile": 59,
+            "featured_product": "burro-corpo-caffe-cioccolato"
+          }
+        }
+      },
+      "block_order": [
+        "dots_hRfbJq",
+        "dots_dawm3h",
+        "dots_YVxVVp"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 30px; }}"
+      ],
+      "settings": {
+        "heading": "Collezione Caffè e Cacao",
+        "desktop_image": "shopify://shop_images/DSC00001-Edit_copy2_copy.jpg",
+        "full-width-enabled": false,
+        "mobile_image": "shopify://shop_images/DSC09997-Edit_copy.jpg",
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "#fff8db",
+        "color-overlay-opacity": 100,
+        "margin-top": 68,
+        "margin-bottom": 68
+      }
+    },
+    "multicolumn_Tcxy6j": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Kw8zjE": {
+          "type": "column",
+          "settings": {
+            "heading": "Malì Doccia Crema",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Trasforma ogni doccia in un momento di puro piacere sensoriale con la nostra Doccia Crema. La sua formula ricca e morbida si fonde con la pelle, regalandoti un'idratazione profonda e una fragranza golosa che richiama il mondo della pasticceria. Con un unico gesto la tua pelle si deterge e si idrata: la comodità di un solo prodotto che unisce freschezza e nutrimento quotidiano. Ogni goccia è un abbraccio dolce e delicato che lascia la pelle morbida e avvolta in una fresca sensazione di benessere.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/Doccia_crema_Lampone-_overlay.png"
+          }
+        },
+        "column_9B7nPQ": {
+          "type": "column",
+          "settings": {
+            "heading": "Malì Scrub Corpo",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Rimuovi delicatamente le cellule morte e rivitalizza la pelle con il nostro Scrub Corpo. Le sue micro-particelle esfolianti, arricchite da ingredienti naturali, donano un effetto levigante, mentre il profumo goloso ti trasporta in un mondo di dolcezza. La pelle risulterà più morbida, luminosa e pronta ad assorbire tutti i benefici della tua routine di bellezza.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/Scrub_Lampone-overlay_27067097-d554-4020-8ecd-8d5d3c89add1.png"
+          }
+        },
+        "column_PP9yHE": {
+          "type": "column",
+          "settings": {
+            "heading": "Malì Burro Corpo",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Concludi il tuo rituale di bellezza con il nostro Burro Corpo, un concentrato di nutrimento per la tua pelle. La sua texture ricca e cremosa si fonde perfettamente, lasciando la pelle intensamente idratata e avvolta da una fragranza dolce e avvolgente. Un vero e proprio abbraccio che coccola la tua pelle, rendendola soffice e luminosa, come una dolce carezza.</p>",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "shopify://shop_images/Burro_corpo_Lampone-overlay_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "column_Kw8zjE",
+        "column_9B7nPQ",
+        "column_PP9yHE"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 33px; }}"
+      ],
+      "settings": {
+        "heading": "Malì Bodycare Routine",
+        "swipe_on_mobile": false,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "column_alignment": "center",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fff5f6",
+        "margin-top": 64,
+        "margin-bottom": 80
+      }
+    },
+    "featured_collection_mmQRJx": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 33px; }}"
+      ],
+      "settings": {
+        "title": "Doccia Crema",
+        "disable_on_mobile": false,
+        "collection": "doccia-crema",
+        "product_list": [],
+        "products_to_show": 11,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 4,
+        "spacing_desktop": "24",
+        "make_products_full_width": true,
+        "number_of_column_mobile": 2,
+        "text_alignment": "center",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fff8db",
+        "margin-top": 40,
+        "margin-bottom": 48
+      }
+    },
+    "benefits_product_VwAhcd": {
+      "type": "benefits-product",
+      "blocks": {
+        "benefit_EK3Pii": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Progetto_senza_titolo_44_503edf7b-b24e-4f1b-983f-85018a4bbd2d.png",
+            "item_heading": "Lampone Artico",
+            "text": "<p>Ricco di antiossidanti, il lampone artico lenisce e rigenera la pelle, donando luminosità e freschezza.</p>"
+          }
+        },
+        "benefit_hPxJ7X": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Burro_corpo_limone.png",
+            "item_heading": "Limone di Mentone e Basilico Thai",
+            "text": "<p>Un mix rinfrescante di limone e basilico che stimola e tonifica la pelle, lasciandola fresca e profumata.</p>"
+          }
+        },
+        "benefit_9Y93UA": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Scrub_corpo_lime.png",
+            "item_heading": "Lime di Tahiti",
+            "text": "<p>Fresco e vivace, il Lime di Tahiti rivitalizza la pelle con un tocco energetico e un profumo avvolgente.</p>"
+          }
+        },
+        "benefit_rjzNdt": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Doccia_crema_Albicocca.png",
+            "item_heading": "Albicocca di Bergeron",
+            "text": "<p>Ricca di nutrienti, l'Albicocca di Bergeron idrata e rigenera la pelle, lasciandola morbida e luminosa.</p>"
+          }
+        },
+        "benefit_JeREX6": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Doccia_Crema_Pompelmo.png",
+            "item_heading": "Pompelmo Rosa delle Barbados",
+            "text": "<p>Con le sue proprietà tonificanti, il Pompelmo Rosa delle Barbados rende la pelle fresca e tonica, con una fragranza frizzante.</p>"
+          }
+        },
+        "benefit_BgL38L": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Texture-_Burro_corpo_Cacao.png",
+            "item_heading": "Caffè Blu e Cacao Criollo",
+            "text": "<p>Un’accoppiata perfetta di caffè e cacao, che stimola e nutre la pelle con un profumo ricco e avvolgente.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_EK3Pii",
+        "benefit_hPxJ7X",
+        "benefit_9Y93UA",
+        "benefit_rjzNdt",
+        "benefit_JeREX6",
+        "benefit_BgL38L"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 31px; }}",
+        "@media (min-width: 768px) {h3 {font-size: 26px; }}",
+        "@media (max-width: 768px) {h3 {font-size: 20px; }}"
+      ],
+      "settings": {
+        "heading": "Le nostre Fragranze",
+        "full-width-enabled": true,
+        "desktop_image": "shopify://shop_images/DSC09975-Edit_copy.jpg",
+        "desktop_width": 53,
+        "desktop_max_width": 680,
+        "button_label": "",
+        "button_link": "",
+        "quick_buy_product": "",
+        "button_select": "primary",
+        "size_heading": 130,
+        "size_heading_mobile": 100,
+        "color-body-heading": "rgba(0,0,0,0)",
+        "color-overlay": "#fef3f4",
+        "color-overlay-opacity": 100,
+        "color-body-text": "#99623f",
+        "margin-top": 52,
+        "margin-bottom": 104
+      }
+    },
+    "featured_collection_P3Bbej": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 33px; }}"
+      ],
+      "settings": {
+        "title": "Scrub Corpo",
+        "disable_on_mobile": false,
+        "collection": "scrub-corpo",
+        "product_list": [],
+        "products_to_show": 11,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 4,
+        "spacing_desktop": "24",
+        "make_products_full_width": true,
+        "number_of_column_mobile": 2,
+        "text_alignment": "center",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fff8db",
+        "margin-top": 40,
+        "margin-bottom": 48
+      }
+    },
+    "video_section_AaMxUH": {
+      "type": "video-section",
+      "blocks": {
+        "heading_KLEHkH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dietro le Quinte",
+            "disable_on_mobile": false,
+            "size_heading": 130,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_3PNCUz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Come in una pasticceria, ogni ingrediente che scegliamo è pensato per regalarti un piacere sensoriale. Selezioniamo con cura materie prime pregiate e le amalgamiamo con il meglio per la cura del corpo, creando prodotti che non solo conquistano la vista, ma avvolgono la pelle, facendola risplendere in un abbraccio di fragranze paradisiache.</p>",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_KLEHkH",
+        "text_3PNCUz"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 33px; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "full-width-enabled": false,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 640,
+        "mobile_fixed_height": 460,
+        "video_hosted": "shopify://files/videos/MaliMilano_13.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "layout_mobile": "hero",
+        "layout": "video_first",
+        "color-heading-text": "rgba(0,0,0,0)",
+        "section-color-overlay": "rgba(0,0,0,0)",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "#ffffff",
+        "color-overlay": "#4a2224",
+        "color-overlay-opacity": 13,
+        "desktop_image": "shopify://shop_images/pompelmo_aggiornato_1.jpg",
+        "desktop_text_vertical_position": "top",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 56,
+        "margin-bottom": 92
+      }
+    },
+    "featured_collection_98txhK": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 33px; }}"
+      ],
+      "settings": {
+        "title": "Burro Corpo",
+        "disable_on_mobile": false,
+        "collection": "burro-corpo",
+        "product_list": [],
+        "products_to_show": 11,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 4,
+        "spacing_desktop": "24",
+        "make_products_full_width": true,
+        "number_of_column_mobile": 2,
+        "text_alignment": "center",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "color-body-text": "rgba(0,0,0,0)",
+        "background_color": "#fff8db",
+        "margin-top": 40,
+        "margin-bottom": 48
+      }
+    },
+    "before_and_after_czd9JQ": {
+      "type": "before-and-after",
+      "blocks": {
+        "heading_7URQgK": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fai Brillare Il Tuo Corpo",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_RNc3CV": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In Malí, ogni prodotto è più di una semplice coccola per la pelle: è un'esperienza che unisce dolcezza, piacere e risultati concreti. Non solo la tua pelle sarà avvolta da fragranze golose e texture pregiate, ma noterai subito anche i suoi benefici straordinari: idratazione, luminosità e nutrimento visibili e misurabili.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_7URQgK",
+        "text_RNc3CV"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {h2 {font-size: 49px; }}",
+        "@media (max-width: 768px) {h2 {font-size: 33px; }}",
+        "@media (min-width: 768px) {h2.hero__title.hero {font-size: 41px; }}",
+        "@media (max-width: 768px) {h2.hero__title.hero {font-size: 28px; }}"
+      ],
+      "settings": {
+        "title": "Prima e Dopo",
+        "layout": "text_first",
+        "before_image": "shopify://shop_images/Tezza-4298.jpg",
+        "after_image": "shopify://shop_images/Tezza-4214.jpg",
+        "desktop-percentage-image-width": 60,
+        "full-width-enabled": false,
+        "slide_height": "fixed_height",
+        "desktop_fixed_height": 500,
+        "mobile_fixed_height": 460,
+        "enable_badges": true,
+        "before_badge": "Prima",
+        "after_badge": "Dopo",
+        "section-color-body-text": "rgba(0,0,0,0)",
+        "section-color-overlay": "#fef3f4",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "rgba(0,0,0,0)",
+        "color-overlay": "rgba(0,0,0,0)",
+        "color-overlay-opacity": 100,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 36,
+        "margin-bottom": 68
+      }
+    },
+    "features_banner_rnAYGJ": {
+      "type": "features-banner",
+      "blocks": {
+        "image_knKEhC": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/delivery_1.png",
+            "select_icon": "user",
+            "heading": "Spedizioni Sicure",
+            "text": "<p>Garantiamo consegne rapide e sicure, affinché tu possa godere dei nostri prodotti senza attese e preoccupazioni. Spedizione Gratuita sopra i 39€.</p>"
+          }
+        },
+        "image_4xqij4": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/wallet_1_1.png",
+            "select_icon": "search",
+            "heading": "Pagamenti Sicuri",
+            "text": "<p>Il tuo acquisto è protetto da sistemi di pagamento sicuri, per una transazione senza rischi e totale tranquillità.</p>"
+          }
+        },
+        "image_izam6t": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/wedding-cake_1.png",
+            "select_icon": "bag",
+            "heading": "Gourmand Bodycare",
+            "text": "<p>Ogni prodotto è una coccola per i sensi che unisce il piacere della pasticceria gourmand alla funzionalità di una bodycare che dona risultati visibili.</p>"
+          }
+        },
+        "image_MwWBCP": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/leaf_1.png",
+            "select_icon": "star",
+            "heading": "Ingredienti Pregiati",
+            "text": "<p>Selezioniamo solo ingredienti pregiati di alta qualità, per garantire trattamenti che rispettano la pelle e la rendono luminosa e sana.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "image_knKEhC",
+        "image_4xqij4",
+        "image_izam6t",
+        "image_MwWBCP"
+      ],
+      "settings": {
+        "heading": "",
+        "size_heading": 100,
+        "size_heading_mobile": 110,
+        "icon_layout": "center",
+        "color_body_icon": "#dd7980",
+        "color_body_text": "rgba(0,0,0,0)",
+        "background_color": "#fff8db",
+        "icon_layout_mobile": "slider",
+        "margin-top": 68,
+        "margin-bottom": 64
+      }
+    }
+  },
+  "order": [
+    "rich_text_with_image_d9iPb9",
+    "grid_view_PEBP9T",
+    "parallax_9pNgNx",
+    "brands_GxCy3w",
+    "shoppable_image_h9RWfB",
+    "multicolumn_Tcxy6j",
+    "featured_collection_mmQRJx",
+    "benefits_product_VwAhcd",
+    "featured_collection_P3Bbej",
+    "video_section_AaMxUH",
+    "featured_collection_98txhK",
+    "before_and_after_czd9JQ",
+    "features_banner_rnAYGJ"
+  ]
+}

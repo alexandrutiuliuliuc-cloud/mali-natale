@@ -831,118 +831,8 @@
                                     </div>
                                 </div>
                             </collapsible-section>
-                        {%- when 'variant_description' -%}
-                            {%- assign current_variant = product.selected_or_first_available_variant -%}
-                            {%- if current_variant.metafields.custom.descrizione_variante != blank -%}
-                                <collapsible-section
-                                    class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-                                    data-accordion-set="pdp"
-                                    data-toggle-tabindex="button, [href], input, select"
-                                >
-                                    <div
-                                        class="wt-collapse__trigger"
-                                        role="button"
-                                        tabindex="0"
-                                        data-open="false"
-                                        aria-expanded="false"
-                                        aria-controls="CollapsibleTab-{{ block.id }}"
-                                    >
-                                        <div class="wt-collapse__trigger__text">
-                                            <span class="wt-collapse__trigger__title">Descrizione</span>
-                                        </div>
-                                        <div class="wt-icon" aria-hidden="true">
-                                            {% render 'icons', id: 'plus' %}
-                                        </div>
-                                    </div>
-                                    <div class="wt-collapse__target" id="CollapsibleTab-{{ block.id }}">
-                                        <div class="wt-collapse__target--text rte" data-variant-content="descrizione">
-                                            {{ current_variant.metafields.custom.descrizione_variante | newline_to_br }}
-                                        </div>
-                                    </div>
-                                </collapsible-section>
-                                <script type="application/json" data-variant-metafield="descrizione_variante">
-                                    {%- for variant in product.variants -%}
-                                        "{{ variant.id }}": {{ variant.metafields.custom.descrizione_variante | json }}{% unless forloop.last %},{% endunless %}
-                                    {%- endfor -%}
-                                </script>
-                            {%- endif -%}
-                        {%- when 'variant_jar' -%}
-                            {%- assign current_variant = product.selected_or_first_available_variant -%}
-                            {%- if current_variant.metafields.custom.titolo_vasetto_sigillato != blank and current_variant.metafields.custom.vasetto_sigillato != blank -%}
-                                <collapsible-section
-                                    class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-                                    data-accordion-set="pdp"
-                                    data-toggle-tabindex="button, [href], input, select"
-                                >
-                                    <div
-                                        class="wt-collapse__trigger"
-                                        role="button"
-                                        tabindex="0"
-                                        data-open="false"
-                                        aria-expanded="false"
-                                        aria-controls="CollapsibleTab-{{ block.id }}"
-                                    >
-                                        <div class="wt-collapse__trigger__text">
-                                            <span class="wt-collapse__trigger__title" data-variant-title="vasetto">
-                                                {{ current_variant.metafields.custom.titolo_vasetto_sigillato }}
-                                            </span>
-                                        </div>
-                                        <div class="wt-icon" aria-hidden="true">
-                                            {% render 'icons', id: 'plus' %}
-                                        </div>
-                                    </div>
-                                    <div class="wt-collapse__target" id="CollapsibleTab-{{ block.id }}">
-                                        <div class="wt-collapse__target--text rte" data-variant-content="vasetto">
-                                            {{ current_variant.metafields.custom.vasetto_sigillato | newline_to_br }}
-                                        </div>
-                                    </div>
-                                </collapsible-section>
-                                <script type="application/json" data-variant-metafield="titolo_vasetto">
-                                    {%- for variant in product.variants -%}
-                                        "{{ variant.id }}": {{ variant.metafields.custom.titolo_vasetto_sigillato | json }}{% unless forloop.last %},{% endunless %}
-                                    {%- endfor -%}
-                                </script>
-                                <script type="application/json" data-variant-metafield="vasetto_sigillato">
-                                    {%- for variant in product.variants -%}
-                                        "{{ variant.id }}": {{ variant.metafields.custom.vasetto_sigillato | json }}{% unless forloop.last %},{% endunless %}
-                                    {%- endfor -%}
-                                </script>
-                            {%- endif -%}
-                        {%- when 'variant_chocolate' -%}
-                            {%- assign current_variant = product.selected_or_first_available_variant -%}
-                            {%- if current_variant.metafields.custom.scatola_matite != blank -%}
-                                <collapsible-section
-                                    class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-                                    data-accordion-set="pdp"
-                                    data-toggle-tabindex="button, [href], input, select"
-                                >
-                                    <div
-                                        class="wt-collapse__trigger"
-                                        role="button"
-                                        tabindex="0"
-                                        data-open="false"
-                                        aria-expanded="false"
-                                        aria-controls="CollapsibleTab-{{ block.id }}"
-                                    >
-                                        <div class="wt-collapse__trigger__text">
-                                            <span class="wt-collapse__trigger__title">1 scatola matite di cioccolato fondente e nocciola – 60 g</span>
-                                        </div>
-                                        <div class="wt-icon" aria-hidden="true">
-                                            {% render 'icons', id: 'plus' %}
-                                        </div>
-                                    </div>
-                                    <div class="wt-collapse__target" id="CollapsibleTab-{{ block.id }}">
-                                        <div class="wt-collapse__target--text rte" data-variant-content="matite">
-                                            {{ current_variant.metafields.custom.scatola_matite | newline_to_br }}
-                                        </div>
-                                    </div>
-                                </collapsible-section>
-                                <script type="application/json" data-variant-metafield="scatola_matite">
-                                    {%- for variant in product.variants -%}
-                                        "{{ variant.id }}": {{ variant.metafields.custom.scatola_matite | json }}{% unless forloop.last %},{% endunless %}
-                                    {%- endfor -%}
-                                </script>
-                            {%- endif -%}
+                        {%- when 'variant_metafields_collapsibles' -%}
+                            {% render 'variant-metafields-collapsible', product: product %}
                         {%- when 'custom_option' -%}
                             {% assign options = block.settings.options | newline_to_br | split: '<br />' %}
 
@@ -1692,74 +1582,6 @@
                     {%- endfor -%}
                 </div>
             </section>
-
-            <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                // Listener per i cambiamenti di variante
-                document.addEventListener('variant:change', function(event) {
-                  if (event.detail && event.detail.variant) {
-                    updateVariantMetafields(event.detail.variant.id);
-                  }
-                });
-
-                // Listener per input radio (variant picker buttons)
-                document.querySelectorAll('input[name="id"]').forEach(function(input) {
-                  input.addEventListener('change', function() {
-                    updateVariantMetafields(parseInt(this.value));
-                  });
-                });
-
-                // Listener per select dropdown
-                const variantSelect = document.querySelector('select[name="id"]');
-                if (variantSelect) {
-                  variantSelect.addEventListener('change', function() {
-                    updateVariantMetafields(parseInt(this.value));
-                  });
-                }
-
-                function updateVariantMetafields(variantId) {
-                  // Aggiorna descrizione
-                  const descrizioneScript = document.querySelector('[data-variant-metafield="descrizione_variante"]');
-                  if (descrizioneScript) {
-                    const descrizioneData = JSON.parse(descrizioneScript.textContent);
-                    const descrizioneEl = document.querySelector('[data-variant-content="descrizione"]');
-                    if (descrizioneEl && descrizioneData[variantId]) {
-                      descrizioneEl.innerHTML = descrizioneData[variantId].replace(/\n/g, '<br>');
-                    }
-                  }
-
-                  // Aggiorna titolo vasetto
-                  const titoloVasettoScript = document.querySelector('[data-variant-metafield="titolo_vasetto"]');
-                  if (titoloVasettoScript) {
-                    const titoloVasettoData = JSON.parse(titoloVasettoScript.textContent);
-                    const titoloVasettoEl = document.querySelector('[data-variant-title="vasetto"]');
-                    if (titoloVasettoEl && titoloVasettoData[variantId]) {
-                      titoloVasettoEl.textContent = titoloVasettoData[variantId];
-                    }
-                  }
-
-                  // Aggiorna contenuto vasetto
-                  const vasettoScript = document.querySelector('[data-variant-metafield="vasetto_sigillato"]');
-                  if (vasettoScript) {
-                    const vasettoData = JSON.parse(vasettoScript.textContent);
-                    const vasettoEl = document.querySelector('[data-variant-content="vasetto"]');
-                    if (vasettoEl && vasettoData[variantId]) {
-                      vasettoEl.innerHTML = vasettoData[variantId].replace(/\n/g, '<br>');
-                    }
-                  }
-
-                  // Aggiorna matite
-                  const matiteScript = document.querySelector('[data-variant-metafield="scatola_matite"]');
-                  if (matiteScript) {
-                    const matiteData = JSON.parse(matiteScript.textContent);
-                    const matiteEl = document.querySelector('[data-variant-content="matite"]');
-                    if (matiteEl && matiteData[variantId]) {
-                      matiteEl.innerHTML = matiteData[variantId].replace(/\n/g, '<br>');
-                    }
-                  }
-                }
-              });
-            </script>
 
             <sticky-buy-button class="wt-product__sticky-buy">
                 <button
@@ -2886,20 +2708,8 @@
       ]
     },
     {
-      "type": "variant_description",
-      "name": "Variant Description",
-      "limit": 1,
-      "settings": []
-    },
-    {
-      "type": "variant_jar",
-      "name": "Variant Jar",
-      "limit": 1,
-      "settings": []
-    },
-    {
-      "type": "variant_chocolate",
-      "name": "Variant Chocolate",
+      "type": "variant_metafields_collapsibles",
+      "name": "Variant Metafields Collapsibles",
       "limit": 1,
       "settings": []
     },

@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_DKVb4L": {
+          "type": "announcement",
+          "settings": {
+            "text": "ORDINA ENTRO IL 19 DICEMBRE E RICEVERAI TUTTO IN TEMPO PER NATALE!",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_DKVb4L"
+      ],
+      "settings": {
+        "marquee": true,
+        "animation_speed": "150",
+        "checkbox_close_announcement": false,
+        "color-body-text": "#ffffff",
+        "background_color": "#dd7980"
+      }
+    },
+    "header": {
+      "type": "page-header",
+      "settings": {
+        "layout": "option_4",
+        "sticky_header": true,
+        "sticky_header_always": true,
+        "show_line_separator": true,
+        "show_shadow": true,
+        "logo": "shopify://shop_images/Logo_Mali_Milano_marrone-10.png",
+        "large_screen_logo_width": 80,
+        "mobile_screen_logo_width": 70,
+        "menu": "new-menu-esteso",
+        "teaser_menu": "new-menu",
+        "mobile_footer_menu": "",
+        "transparent_header_color": "#ffffff",
+        "drawer_title": "Shop by",
+        "typing_search": "Search...",
+        "suggestions_title": "",
+        "suggestions_menu": ""
+      }
+    },
+    "page_header_logo_banner_tpXcBm": {
+      "type": "page-header-logo-banner",
+      "settings": {
+        "logo_image": "shopify://shop_images/Logo_Mali_Milano-bianco-09.png",
+        "image_hosted": "shopify://shop_images/DSC09980-Edit_copy.jpg",
+        "image_hosted_mobile": "shopify://shop_images/DSC09980-Edit_copy.jpg",
+        "additional_text": "ENTRA NEL MONDO DI MALÌ",
+        "button_style": "primary",
+        "button_label": "",
+        "button_disable_on_mobile": false,
+        "button_link": "",
+        "button_link_in_new_window": false,
+        "color-body-text": "#ffffff",
+        "color-overlay": "#ac686c",
+        "color-overlay-opacity": 31
+      }
+    },
+    "1764751495877b206b": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header",
+    "page_header_logo_banner_tpXcBm",
+    "1764751495877b206b"
+  ]
+}
