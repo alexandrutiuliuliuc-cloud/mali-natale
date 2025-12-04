@@ -11,11 +11,6 @@
   
   {% comment %} COLLAPSIBLE 1: Descrizione Variante {% endcomment %}
   {%- if current_variant.metafields.custom.descrizione_variante != blank -%}
-    {% comment %} Separatore {% endcomment %}
-    <div data-separator="variant-1" not-quick-add>
-      <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
-    </div>
-    
     <collapsible-section
       class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
       data-accordion-set="pdp"
@@ -30,7 +25,7 @@
         aria-controls="CollapsibleTab-descrizione-{{ current_variant.id }}"
       >
         <div class="wt-collapse__trigger__text">
-          <span class="wt-collapse__trigger__title">DESCRIZIONE</span>
+          <span class="wt-collapse__trigger__title">Descrizione</span>
         </div>
         <div class="wt-icon" aria-hidden="true">
           {% render 'icons', id: 'plus' %}
@@ -44,13 +39,13 @@
     </collapsible-section>
   {%- endif -%}
   
+  {% comment %} Separatore {% endcomment %}
+  <div data-separator="variant-2" not-quick-add>
+    <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
+  </div>
+  
   {% comment %} COLLAPSIBLE 2: Vasetto Sigillato {% endcomment %}
   {%- if current_variant.metafields.custom.titolo_vasetto_sigillato != blank and current_variant.metafields.custom.vasetto_sigillato != blank -%}
-    {% comment %} Separatore {% endcomment %}
-    <div data-separator="variant-2" not-quick-add>
-      <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
-    </div>
-    
     <collapsible-section
       class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
       data-accordion-set="pdp"
@@ -81,13 +76,13 @@
     </collapsible-section>
   {%- endif -%}
   
+  {% comment %} Separatore {% endcomment %}
+  <div data-separator="variant-3" not-quick-add>
+    <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
+  </div>
+  
   {% comment %} COLLAPSIBLE 3: Scatola Matite {% endcomment %}
   {%- if current_variant.metafields.custom.scatola_matite != blank -%}
-    {% comment %} Separatore {% endcomment %}
-    <div data-separator="variant-3" not-quick-add>
-      <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
-    </div>
-    
     <collapsible-section
       class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
       data-accordion-set="pdp"
@@ -102,7 +97,7 @@
         aria-controls="CollapsibleTab-matite-{{ current_variant.id }}"
       >
         <div class="wt-collapse__trigger__text">
-          <span class="wt-collapse__trigger__title">1 SCATOLA MATITE DI CIOCCOLATO FONDENTE E NOCCIOLA – 60 g</span>
+          <span class="wt-collapse__trigger__title">1 scatola matite di cioccolato fondente e nocciola – 60 g</span>
         </div>
         <div class="wt-icon" aria-hidden="true">
           {% render 'icons', id: 'plus' %}
@@ -115,6 +110,11 @@
       </div>
     </collapsible-section>
   {%- endif -%}
+  
+  {% comment %} Separatore finale {% endcomment %}
+  <div data-separator="variant-4" not-quick-add>
+    <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
+  </div>
 </div>
 
 {% comment %} Script per aggiornare i metafield quando cambia la variante {% endcomment %}
