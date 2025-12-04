@@ -113,8 +113,8 @@
             "margin-bottom": 0
           }
         },
-        "variant_metafields_collapsibles_block": {
-          "type": "variant_metafields_collapsibles",
+        "variant_metafields_block": {
+          "type": "variant_metafields",
           "settings": {}
         },
         "collapsible_tab_pWiWBA": {
@@ -159,7 +159,7 @@
         "inventory_JWQnXt",
         "buy_buttons",
         "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d",
-        "variant_metafields_collapsibles_block",
+        "variant_metafields_block",
         "collapsible_tab_pWiWBA",
         "separator_LkpgxB",
         "share_buttons_Ct9CXx"

@@ -831,7 +831,7 @@
                                     </div>
                                 </div>
                             </collapsible-section>
-                        {%- when 'variant_metafields_collapsibles' -%}
+                        {%- when 'variant_metafields' -%}
                             {% render 'variant-metafields-collapsible', product: product %}
                         {%- when 'custom_option' -%}
                             {% assign options = block.settings.options | newline_to_br | split: '<br />' %}
@@ -2708,8 +2708,8 @@
       ]
     },
     {
-      "type": "variant_metafields_collapsibles",
-      "name": "Variant Metafields Collapsibles",
+      "type": "variant_metafields",
+      "name": "Variant Metafields",
       "limit": 1,
       "settings": []
     },
