@@ -861,9 +861,11 @@
                                     </div>
                                 </collapsible-section>
                                 <script type="application/json" data-variant-metafield="descrizione_variante">
+                                    {
                                     {%- for variant in product.variants -%}
                                         "{{ variant.id }}": {{ variant.metafields.custom.descrizione_variante | json }}{% unless forloop.last %},{% endunless %}
                                     {%- endfor -%}
+                                    }
                                 </script>
                             {%- endif -%}
                         {%- when 'variant_jar' -%}
@@ -898,14 +900,18 @@
                                     </div>
                                 </collapsible-section>
                                 <script type="application/json" data-variant-metafield="titolo_vasetto">
+                                    {
                                     {%- for variant in product.variants -%}
                                         "{{ variant.id }}": {{ variant.metafields.custom.titolo_vasetto_sigillato | json }}{% unless forloop.last %},{% endunless %}
                                     {%- endfor -%}
+                                    }
                                 </script>
                                 <script type="application/json" data-variant-metafield="vasetto_sigillato">
+                                    {
                                     {%- for variant in product.variants -%}
                                         "{{ variant.id }}": {{ variant.metafields.custom.vasetto_sigillato | json }}{% unless forloop.last %},{% endunless %}
                                     {%- endfor -%}
+                                    }
                                 </script>
                             {%- endif -%}
                         {%- when 'variant_chocolate' -%}
@@ -938,9 +944,11 @@
                                     </div>
                                 </collapsible-section>
                                 <script type="application/json" data-variant-metafield="scatola_matite">
+                                    {
                                     {%- for variant in product.variants -%}
                                         "{{ variant.id }}": {{ variant.metafields.custom.scatola_matite | json }}{% unless forloop.last %},{% endunless %}
                                     {%- endfor -%}
+                                    }
                                 </script>
                             {%- endif -%}
                         {%- when 'custom_option' -%}
@@ -1694,71 +1702,137 @@
             </section>
 
             <script>
-              document.addEventListener('DOMContentLoaded', function() {
-                // Listener per i cambiamenti di variante
-                document.addEventListener('variant:change', function(event) {
-                  if (event.detail && event.detail.variant) {
-                    updateVariantMetafields(event.detail.variant.id);
-                  }
-                });
-
-                // Listener per input radio (variant picker buttons)
-                document.querySelectorAll('input[name="id"]').forEach(function(input) {
-                  input.addEventListener('change', function() {
-                    updateVariantMetafields(parseInt(this.value));
-                  });
-                });
-
-                // Listener per select dropdown
-                const variantSelect = document.querySelector('select[name="id"]');
-                if (variantSelect) {
-                  variantSelect.addEventListener('change', function() {
-                    updateVariantMetafields(parseInt(this.value));
-                  });
-                }
-
+              (function() {
                 function updateVariantMetafields(variantId) {
+                  // Converti variantId in stringa per match con le chiavi JSON
+                  variantId = String(variantId);
+                  
+                  console.log('Updating variant metafields for variant ID:', variantId);
+
                   // Aggiorna descrizione
                   const descrizioneScript = document.querySelector('[data-variant-metafield="descrizione_variante"]');
                   if (descrizioneScript) {
-                    const descrizioneData = JSON.parse(descrizioneScript.textContent);
-                    const descrizioneEl = document.querySelector('[data-variant-content="descrizione"]');
-                    if (descrizioneEl && descrizioneData[variantId]) {
-                      descrizioneEl.innerHTML = descrizioneData[variantId].replace(/\n/g, '<br>');
+                    try {
+                      const descrizioneData = JSON.parse(descrizioneScript.textContent);
+                      const descrizioneEl = document.querySelector('[data-variant-content="descrizione"]');
+                      if (descrizioneEl && descrizioneData[variantId]) {
+                        descrizioneEl.innerHTML = descrizioneData[variantId].replace(/\n/g, '<br>');
+                        console.log('Updated descrizione');
+                      }
+                    } catch(e) {
+                      console.error('Error parsing descrizione data:', e);
                     }
                   }
 
                   // Aggiorna titolo vasetto
                   const titoloVasettoScript = document.querySelector('[data-variant-metafield="titolo_vasetto"]');
                   if (titoloVasettoScript) {
-                    const titoloVasettoData = JSON.parse(titoloVasettoScript.textContent);
-                    const titoloVasettoEl = document.querySelector('[data-variant-title="vasetto"]');
-                    if (titoloVasettoEl && titoloVasettoData[variantId]) {
-                      titoloVasettoEl.textContent = titoloVasettoData[variantId];
+                    try {
+                      const titoloVasettoData = JSON.parse(titoloVasettoScript.textContent);
+                      const titoloVasettoEl = document.querySelector('[data-variant-title="vasetto"]');
+                      if (titoloVasettoEl && titoloVasettoData[variantId]) {
+                        titoloVasettoEl.textContent = titoloVasettoData[variantId];
+                        console.log('Updated titolo vasetto');
+                      }
+                    } catch(e) {
+                      console.error('Error parsing titolo vasetto data:', e);
                     }
                   }
 
                   // Aggiorna contenuto vasetto
                   const vasettoScript = document.querySelector('[data-variant-metafield="vasetto_sigillato"]');
                   if (vasettoScript) {
-                    const vasettoData = JSON.parse(vasettoScript.textContent);
-                    const vasettoEl = document.querySelector('[data-variant-content="vasetto"]');
-                    if (vasettoEl && vasettoData[variantId]) {
-                      vasettoEl.innerHTML = vasettoData[variantId].replace(/\n/g, '<br>');
+                    try {
+                      const vasettoData = JSON.parse(vasettoScript.textContent);
+                      const vasettoEl = document.querySelector('[data-variant-content="vasetto"]');
+                      if (vasettoEl && vasettoData[variantId]) {
+                        vasettoEl.innerHTML = vasettoData[variantId].replace(/\n/g, '<br>');
+                        console.log('Updated vasetto content');
+                      }
+                    } catch(e) {
+                      console.error('Error parsing vasetto data:', e);
                     }
                   }
 
                   // Aggiorna matite
                   const matiteScript = document.querySelector('[data-variant-metafield="scatola_matite"]');
                   if (matiteScript) {
-                    const matiteData = JSON.parse(matiteScript.textContent);
-                    const matiteEl = document.querySelector('[data-variant-content="matite"]');
-                    if (matiteEl && matiteData[variantId]) {
-                      matiteEl.innerHTML = matiteData[variantId].replace(/\n/g, '<br>');
+                    try {
+                      const matiteData = JSON.parse(matiteScript.textContent);
+                      const matiteEl = document.querySelector('[data-variant-content="matite"]');
+                      if (matiteEl && matiteData[variantId]) {
+                        matiteEl.innerHTML = matiteData[variantId].replace(/\n/g, '<br>');
+                        console.log('Updated matite content');
+                      }
+                    } catch(e) {
+                      console.error('Error parsing matite data:', e);
                     }
                   }
                 }
-              });
+
+                // Inizializza quando il DOM è pronto
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', init);
+                } else {
+                  init();
+                }
+
+                function init() {
+                  console.log('Initializing variant metafields updater');
+
+                  // Listener per variant:change event (tema custom)
+                  document.addEventListener('variant:change', function(event) {
+                    console.log('variant:change event detected', event.detail);
+                    if (event.detail && event.detail.variant && event.detail.variant.id) {
+                      updateVariantMetafields(event.detail.variant.id);
+                    }
+                  });
+
+                  // Listener per input radio (variant picker buttons)
+                  document.querySelectorAll('input[name="id"]').forEach(function(input) {
+                    input.addEventListener('change', function() {
+                      console.log('Radio input changed:', this.value);
+                      updateVariantMetafields(this.value);
+                    });
+                  });
+
+                  // Listener per select dropdown
+                  const variantSelect = document.querySelector('select[name="id"]');
+                  if (variantSelect) {
+                    variantSelect.addEventListener('change', function() {
+                      console.log('Select changed:', this.value);
+                      updateVariantMetafields(this.value);
+                    });
+                  }
+
+                  // Listener per variant-radios component (Shopify 2.0)
+                  const variantRadios = document.querySelector('variant-radios');
+                  if (variantRadios) {
+                    variantRadios.addEventListener('change', function(event) {
+                      const selectedInput = event.target.querySelector('input:checked');
+                      if (selectedInput) {
+                        console.log('variant-radios changed:', selectedInput.value);
+                        updateVariantMetafields(selectedInput.value);
+                      }
+                    });
+                  }
+
+                  // Listener per variant-selects component (Shopify 2.0)
+                  const variantSelects = document.querySelector('variant-selects');
+                  if (variantSelects) {
+                    variantSelects.addEventListener('change', function(event) {
+                      const form = document.querySelector('form[action*="/cart/add"]');
+                      if (form) {
+                        const variantIdInput = form.querySelector('[name="id"]');
+                        if (variantIdInput) {
+                          console.log('variant-selects changed:', variantIdInput.value);
+                          updateVariantMetafields(variantIdInput.value);
+                        }
+                      }
+                    });
+                  }
+                }
+              })();
             </script>
 
             <sticky-buy-button class="wt-product__sticky-buy">
