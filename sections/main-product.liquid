@@ -1691,24 +1691,37 @@
               (function() {
                 const sectionId = '{{ section.id }}';
                 let variantMetafieldsData = null;
+                let isUpdating = false;
 
                 // Carica i dati dal JSON globale
                 function loadVariantData() {
                   const dataScript = document.getElementById('variant-metafields-data-' + sectionId);
-                  if (dataScript) {
-                    try {
-                      variantMetafieldsData = JSON.parse(dataScript.textContent);
-                      console.log('Loaded variant metafields data:', variantMetafieldsData);
-                    } catch(e) {
-                      console.error('Error parsing variant metafields data:', e);
-                    }
+                  if (!dataScript) {
+                    console.error('❌ Variant metafields data script not found');
+                    return false;
+                  }
+                  
+                  try {
+                    variantMetafieldsData = JSON.parse(dataScript.textContent);
+                    console.log('✅ Loaded variant metafields data:', Object.keys(variantMetafieldsData).length, 'variants');
+                    console.log('Data sample:', variantMetafieldsData);
+                    return true;
+                  } catch(e) {
+                    console.error('❌ Error parsing variant metafields data:', e);
+                    console.log('Script content:', dataScript.textContent);
+                    return false;
                   }
                 }
 
                 // Aggiorna i contenuti dei collapsible con i dati della variante
                 function updateVariantMetafields(variantId) {
+                  if (isUpdating) {
+                    console.log('⏳ Already updating, skipping...');
+                    return;
+                  }
+
                   if (!variantMetafieldsData) {
-                    console.warn('Variant metafields data not loaded');
+                    console.warn('⚠️ Variant metafields data not loaded');
                     return;
                   }
 
@@ -1717,79 +1730,147 @@
                   const data = variantMetafieldsData[variantId];
                   
                   if (!data) {
-                    console.warn('No data found for variant ID:', variantId);
+                    console.warn('⚠️ No data found for variant ID:', variantId);
+                    console.log('Available variant IDs:', Object.keys(variantMetafieldsData));
                     return;
                   }
 
-                  console.log('Updating metafields for variant:', variantId, data);
+                  isUpdating = true;
+                  console.log('🔄 Updating metafields for variant:', variantId);
+                  console.log('Data:', data);
+
+                  let updated = 0;
 
                   // Aggiorna descrizione
                   const descrizioneEl = document.querySelector('[data-variant-content="descrizione"]');
-                  if (descrizioneEl && data.descrizione) {
-                    descrizioneEl.innerHTML = data.descrizione.replace(/\n/g, '<br>');
-                    console.log('✓ Updated descrizione');
+                  if (descrizioneEl) {
+                    if (data.descrizione) {
+                      descrizioneEl.innerHTML = data.descrizione.replace(/\n/g, '<br>');
+                      console.log('✅ Updated descrizione');
+                      updated++;
+                    } else {
+                      console.log('⚠️ No descrizione data');
+                    }
+                  } else {
+                    console.log('❌ Descrizione element not found');
                   }
 
                   // Aggiorna titolo vasetto
                   const titoloVasettoEl = document.querySelector('[data-variant-title="vasetto"]');
-                  if (titoloVasettoEl && data.titoloVasetto) {
-                    titoloVasettoEl.textContent = data.titoloVasetto;
-                    console.log('✓ Updated titolo vasetto');
+                  if (titoloVasettoEl) {
+                    if (data.titoloVasetto) {
+                      titoloVasettoEl.textContent = data.titoloVasetto;
+                      console.log('✅ Updated titolo vasetto');
+                      updated++;
+                    } else {
+                      console.log('⚠️ No titoloVasetto data');
+                    }
+                  } else {
+                    console.log('❌ Titolo vasetto element not found');
                   }
 
                   // Aggiorna contenuto vasetto
                   const vasettoEl = document.querySelector('[data-variant-content="vasetto"]');
-                  if (vasettoEl && data.vasetto) {
-                    vasettoEl.innerHTML = data.vasetto.replace(/\n/g, '<br>');
-                    console.log('✓ Updated vasetto content');
+                  if (vasettoEl) {
+                    if (data.vasetto) {
+                      vasettoEl.innerHTML = data.vasetto.replace(/\n/g, '<br>');
+                      console.log('✅ Updated vasetto content');
+                      updated++;
+                    } else {
+                      console.log('⚠️ No vasetto data');
+                    }
+                  } else {
+                    console.log('❌ Vasetto element not found');
                   }
 
                   // Aggiorna matite
                   const matiteEl = document.querySelector('[data-variant-content="matite"]');
-                  if (matiteEl && data.matite) {
-                    matiteEl.innerHTML = data.matite.replace(/\n/g, '<br>');
-                    console.log('✓ Updated matite content');
+                  if (matiteEl) {
+                    if (data.matite) {
+                      matiteEl.innerHTML = data.matite.replace(/\n/g, '<br>');
+                      console.log('✅ Updated matite content');
+                      updated++;
+                    } else {
+                      console.log('⚠️ No matite data');
+                    }
+                  } else {
+                    console.log('❌ Matite element not found');
                   }
+
+                  console.log('📊 Updated', updated, 'fields');
+                  
+                  setTimeout(function() {
+                    isUpdating = false;
+                  }, 500);
                 }
 
                 // Inizializza
                 function init() {
-                  console.log('🚀 Initializing variant metafields updater');
-                  loadVariantData();
+                  console.log('🚀 Initializing variant metafields updater for section:', sectionId);
+                  
+                  if (!loadVariantData()) {
+                    console.error('❌ Failed to load variant data, aborting');
+                    return;
+                  }
 
-                  // Listener per variantChangeEnd (dopo che il tema ha fatto il rendering)
-                  document.addEventListener('variantChangeEnd', function(event) {
-                    console.log('📦 variantChangeEnd event detected');
-                    
-                    // Aspetta un attimo per permettere al DOM di aggiornarsi
-                    setTimeout(function() {
-                      const form = document.querySelector('form[action*="/cart/add"]');
-                      if (form) {
-                        const variantIdInput = form.querySelector('[name="id"]');
-                        if (variantIdInput && variantIdInput.value) {
-                          console.log('🔄 Updating for variant:', variantIdInput.value);
-                          updateVariantMetafields(variantIdInput.value);
-                        }
-                      }
-                    }, 100);
-                  });
+                  // Listener diretto sul form input[name="id"]
+                  const form = document.querySelector('form[action*="/cart/add"]');
+                  if (form) {
+                    const variantInput = form.querySelector('input[name="id"]');
+                    if (variantInput) {
+                      console.log('✅ Found variant input, adding change listener');
+                      console.log('Current variant:', variantInput.value);
+                      
+                      // Observer per cambiamenti al value
+                      const observer = new MutationObserver(function(mutations) {
+                        console.log('🔍 Input value changed via attribute');
+                        updateVariantMetafields(variantInput.value);
+                      });
+                      
+                      observer.observe(variantInput, {
+                        attributes: true,
+                        attributeFilter: ['value']
+                      });
 
-                  // Backup: listener diretto sui variant-options (il componente del tema)
-                  const variantOptions = document.querySelector('variant-options');
+                      // Event listener normale
+                      variantInput.addEventListener('change', function() {
+                        console.log('🔍 Input change event:', this.value);
+                        updateVariantMetafields(this.value);
+                      });
+                    } else {
+                      console.error('❌ Variant input not found in form');
+                    }
+                  } else {
+                    console.error('❌ Product form not found');
+                  }
+
+                  // Listener su variant-options
+                  const variantOptions = document.querySelector('variant-options[data-section="{{ section.id }}"]');
                   if (variantOptions) {
+                    console.log('✅ Found variant-options, adding listener');
                     variantOptions.addEventListener('change', function() {
                       setTimeout(function() {
-                        const form = document.querySelector('form[action*="/cart/add"]');
-                        if (form) {
-                          const variantIdInput = form.querySelector('[name="id"]');
-                          if (variantIdInput && variantIdInput.value) {
-                            console.log('🔄 Variant options changed:', variantIdInput.value);
-                            updateVariantMetafields(variantIdInput.value);
-                          }
+                        const variantInput = document.querySelector('form[action*="/cart/add"] input[name="id"]');
+                        if (variantInput && variantInput.value) {
+                          console.log('🔍 variant-options changed:', variantInput.value);
+                          updateVariantMetafields(variantInput.value);
                         }
-                      }, 150);
+                      }, 200);
                     });
+                  } else {
+                    console.warn('⚠️ variant-options not found');
                   }
+
+                  // Event personalizzato
+                  document.addEventListener('variantChangeEnd', function() {
+                    console.log('🔍 variantChangeEnd event');
+                    setTimeout(function() {
+                      const variantInput = document.querySelector('form[action*="/cart/add"] input[name="id"]');
+                      if (variantInput && variantInput.value) {
+                        updateVariantMetafields(variantInput.value);
+                      }
+                    }, 200);
+                  });
                 }
 
                 // Inizializza quando il DOM è pronto
