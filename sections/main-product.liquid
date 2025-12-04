@@ -831,10 +831,8 @@
                                     </div>
                                 </div>
                             </collapsible-section>
-                        {%- when 'variant_giftpack_info' -%}
+                        {%- when 'giftpack_description' -%}
                             {%- assign v = product.selected_or_first_available_variant -%}
-                            
-                            {%- comment -%} DESCRIZIONE VARIANTE {%- endcomment -%}
                             {%- if v.metafields.custom.descrizione_variante != blank -%}
                               <collapsible-section
                                   class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
@@ -864,13 +862,14 @@
                                   </div>
                               </collapsible-section>
                             {%- endif -%}
-                            
-                            {%- comment -%} VASETTO SIGILLATO {%- endcomment -%}
+                        {%- when 'giftpack_jar' -%}
+                            {%- assign v = product.selected_or_first_available_variant -%}
                             {%- if v.metafields.custom.titolo_vasetto_sigillato != blank and v.metafields.custom.vasetto_sigillato != blank -%}
                               <collapsible-section
                                   class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
                                   data-accordion-set="pdp"
                                   data-toggle-tabindex="button, [href], input, select"
+                                  {{ block.shopify_attributes }}
                               >
                                   <div
                                       class="wt-collapse__trigger"
@@ -896,13 +895,14 @@
                                   </div>
                               </collapsible-section>
                             {%- endif -%}
-                            
-                            {%- comment -%} SCATOLA MATITE {%- endcomment -%}
+                        {%- when 'giftpack_chocolate' -%}
+                            {%- assign v = product.selected_or_first_available_variant -%}
                             {%- if v.metafields.custom.scatola_matite != blank -%}
                               <collapsible-section
                                   class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
                                   data-accordion-set="pdp"
                                   data-toggle-tabindex="button, [href], input, select"
+                                  {{ block.shopify_attributes }}
                               >
                                   <div
                                       class="wt-collapse__trigger"
@@ -926,7 +926,7 @@
                                   </div>
                               </collapsible-section>
                             {%- endif -%}
-                            
+                        {%- when 'giftpack_data' -%}
                             {%- comment -%} JSON con tutti i dati delle varianti per aggiornamento dinamico {%- endcomment -%}
                             <script type="application/json" id="giftpack-variant-data-{{ section.id }}">
                               {
@@ -2897,8 +2897,26 @@
       ]
     },
     {
-      "type": "variant_giftpack_info",
-      "name": "Giftpack Info",
+      "type": "giftpack_description",
+      "name": "Giftpack Descrizione",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "giftpack_jar",
+      "name": "Giftpack Vasetto",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "giftpack_chocolate",
+      "name": "Giftpack Matite",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "giftpack_data",
+      "name": "Giftpack Data",
       "limit": 1,
       "settings": []
     },

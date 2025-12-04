@@ -113,11 +113,11 @@
             "margin-bottom": 0
           }
         },
-        "variant_giftpack_info_block": {
-          "type": "variant_giftpack_info",
+        "giftpack_description_block": {
+          "type": "giftpack_description",
           "settings": {}
         },
-        "separator_after_giftpack": {
+        "separator_desc": {
           "type": "separator",
           "settings": {
             "show-separator-line": true,
@@ -125,6 +125,36 @@
             "margin-top": 0,
             "margin-bottom": 0
           }
+        },
+        "giftpack_jar_block": {
+          "type": "giftpack_jar",
+          "settings": {}
+        },
+        "separator_jar": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "giftpack_chocolate_block": {
+          "type": "giftpack_chocolate",
+          "settings": {}
+        },
+        "separator_chocolate": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "giftpack_data_block": {
+          "type": "giftpack_data",
+          "settings": {}
         },
         "collapsible_tab_pWiWBA": {
           "type": "collapsible_tab",
@@ -168,8 +198,13 @@
         "inventory_JWQnXt",
         "buy_buttons",
         "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d",
-        "variant_giftpack_info_block",
-        "separator_after_giftpack",
+        "giftpack_description_block",
+        "separator_desc",
+        "giftpack_jar_block",
+        "separator_jar",
+        "giftpack_chocolate_block",
+        "separator_chocolate",
+        "giftpack_data_block",
         "collapsible_tab_pWiWBA",
         "separator_LkpgxB",
         "share_buttons_Ct9CXx"
