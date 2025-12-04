@@ -838,7 +838,6 @@
                                   class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
                                   data-accordion-set="pdp"
                                   data-toggle-tabindex="button, [href], input, select"
-                                  data-giftpack-block
                                   {{ block.shopify_attributes }}
                               >
                                   <div
@@ -870,7 +869,6 @@
                                   class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
                                   data-accordion-set="pdp"
                                   data-toggle-tabindex="button, [href], input, select"
-                                  data-giftpack-block
                                   {{ block.shopify_attributes }}
                               >
                                   <div
@@ -904,7 +902,6 @@
                                   class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
                                   data-accordion-set="pdp"
                                   data-toggle-tabindex="button, [href], input, select"
-                                  data-giftpack-block
                                   {{ block.shopify_attributes }}
                               >
                                   <div
@@ -929,6 +926,20 @@
                                   </div>
                               </collapsible-section>
                             {%- endif -%}
+                        {%- when 'giftpack_data' -%}
+                            {%- comment -%} JSON con tutti i dati delle varianti per aggiornamento dinamico {%- endcomment -%}
+                            <script type="application/json" id="giftpack-variant-data-{{ section.id }}">
+                              {
+                                {%- for variant in product.variants -%}
+                                  "{{ variant.id }}": {
+                                    "descrizione": {{ variant.metafields.custom.descrizione_variante | metafield_text | json }},
+                                    "titoloVasetto": {{ variant.metafields.custom.titolo_vasetto_sigillato | json }},
+                                    "vasetto": {{ variant.metafields.custom.vasetto_sigillato | metafield_text | json }},
+                                    "matite": {{ variant.metafields.custom.scatola_matite | metafield_text | json }}
+                                  }{% unless forloop.last %},{% endunless %}
+                                {%- endfor -%}
+                              }
+                            </script>
                         {%- when 'custom_option' -%}
                             {% assign options = block.settings.options | newline_to_br | split: '<br />' %}
 
