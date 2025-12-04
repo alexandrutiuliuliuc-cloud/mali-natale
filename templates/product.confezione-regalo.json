@@ -117,6 +117,15 @@
           "type": "variant_giftpack_info",
           "settings": {}
         },
+        "separator_after_giftpack": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#dedede",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
         "collapsible_tab_pWiWBA": {
           "type": "collapsible_tab",
           "settings": {
@@ -160,6 +169,7 @@
         "buy_buttons",
         "a05fcf3e-8e1a-4f1f-8d97-2055eb17138d",
         "variant_giftpack_info_block",
+        "separator_after_giftpack",
         "collapsible_tab_pWiWBA",
         "separator_LkpgxB",
         "share_buttons_Ct9CXx"

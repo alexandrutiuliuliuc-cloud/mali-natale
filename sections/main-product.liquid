@@ -834,111 +834,112 @@
                         {%- when 'variant_giftpack_info' -%}
                             {%- assign v = product.selected_or_first_available_variant -%}
                             
-                            <div class="giftpack-collapsibles" {{ block.shopify_attributes }}>
-                              
-                              {%- comment -%} DESCRIZIONE VARIANTE {%- endcomment -%}
-                              {%- if v.metafields.custom.descrizione_variante != blank -%}
-                                <collapsible-section
-                                    class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-                                    data-accordion-set="pdp"
-                                    data-toggle-tabindex="button, [href], input, select"
-                                >
-                                    <div
-                                        class="wt-collapse__trigger"
-                                        role="button"
-                                        tabindex="0"
-                                        data-open="false"
-                                        aria-expanded="false"
-                                        aria-controls="CollapsibleGiftpack-descrizione-{{ block.id }}"
-                                    >
-                                        <div class="wt-collapse__trigger__text">
-                                            <span class="wt-collapse__trigger__title">Descrizione</span>
-                                        </div>
-                                        <div class="wt-icon" aria-hidden="true">
-                                            {% render 'icons', id: 'plus' %}
-                                        </div>
-                                    </div>
-                                    <div class="wt-collapse__target" id="CollapsibleGiftpack-descrizione-{{ block.id }}">
-                                        <div class="wt-collapse__target--text rte">
-                                            {{ v.metafields.custom.descrizione_variante | metafield_text }}
-                                        </div>
-                                    </div>
-                                </collapsible-section>
-                              {%- endif -%}
-                              
-                              {%- comment -%} Separatore {%- endcomment -%}
-                              <div not-quick-add>
-                                <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
-                              </div>
-                              
-                              {%- comment -%} VASETTO SIGILLATO {%- endcomment -%}
-                              {%- if v.metafields.custom.titolo_vasetto_sigillato != blank and v.metafields.custom.vasetto_sigillato != blank -%}
-                                <collapsible-section
-                                    class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-                                    data-accordion-set="pdp"
-                                    data-toggle-tabindex="button, [href], input, select"
-                                >
-                                    <div
-                                        class="wt-collapse__trigger"
-                                        role="button"
-                                        tabindex="0"
-                                        data-open="false"
-                                        aria-expanded="false"
-                                        aria-controls="CollapsibleGiftpack-vasetto-{{ block.id }}"
-                                    >
-                                        <div class="wt-collapse__trigger__text">
-                                            <span class="wt-collapse__trigger__title">
-                                                {{ v.metafields.custom.titolo_vasetto_sigillato }}
-                                            </span>
-                                        </div>
-                                        <div class="wt-icon" aria-hidden="true">
-                                            {% render 'icons', id: 'plus' %}
-                                        </div>
-                                    </div>
-                                    <div class="wt-collapse__target" id="CollapsibleGiftpack-vasetto-{{ block.id }}">
-                                        <div class="wt-collapse__target--text rte">
-                                            {{ v.metafields.custom.vasetto_sigillato | metafield_text }}
-                                        </div>
-                                    </div>
-                                </collapsible-section>
-                              {%- endif -%}
-                              
-                              {%- comment -%} Separatore {%- endcomment -%}
-                              <div not-quick-add>
-                                <hr class="wt-separator__line wt-product__separator" style="background-color: #dedede;" not-quick-add>
-                              </div>
-                              
-                              {%- comment -%} SCATOLA MATITE {%- endcomment -%}
-                              {%- if v.metafields.custom.scatola_matite != blank -%}
-                                <collapsible-section
-                                    class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-                                    data-accordion-set="pdp"
-                                    data-toggle-tabindex="button, [href], input, select"
-                                >
-                                    <div
-                                        class="wt-collapse__trigger"
-                                        role="button"
-                                        tabindex="0"
-                                        data-open="false"
-                                        aria-expanded="false"
-                                        aria-controls="CollapsibleGiftpack-matite-{{ block.id }}"
-                                    >
-                                        <div class="wt-collapse__trigger__text">
-                                            <span class="wt-collapse__trigger__title">1 scatola matite di cioccolato fondente e nocciola – 60 g</span>
-                                        </div>
-                                        <div class="wt-icon" aria-hidden="true">
-                                            {% render 'icons', id: 'plus' %}
-                                        </div>
-                                    </div>
-                                    <div class="wt-collapse__target" id="CollapsibleGiftpack-matite-{{ block.id }}">
-                                        <div class="wt-collapse__target--text rte">
-                                            {{ v.metafields.custom.scatola_matite | metafield_text }}
-                                        </div>
-                                    </div>
-                                </collapsible-section>
-                              {%- endif -%}
-                              
-                            </div>
+                            {%- comment -%} DESCRIZIONE VARIANTE {%- endcomment -%}
+                            {%- if v.metafields.custom.descrizione_variante != blank -%}
+                              <collapsible-section
+                                  class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+                                  data-accordion-set="pdp"
+                                  data-toggle-tabindex="button, [href], input, select"
+                                  {{ block.shopify_attributes }}
+                              >
+                                  <div
+                                      class="wt-collapse__trigger"
+                                      role="button"
+                                      tabindex="0"
+                                      data-open="false"
+                                      aria-expanded="false"
+                                      aria-controls="CollapsibleGiftpack-descrizione-{{ block.id }}"
+                                  >
+                                      <div class="wt-collapse__trigger__text">
+                                          <span class="wt-collapse__trigger__title">Descrizione</span>
+                                      </div>
+                                      <div class="wt-icon" aria-hidden="true">
+                                          {% render 'icons', id: 'plus' %}
+                                      </div>
+                                  </div>
+                                  <div class="wt-collapse__target" id="CollapsibleGiftpack-descrizione-{{ block.id }}">
+                                      <div class="wt-collapse__target--text rte" data-giftpack-content="descrizione">
+                                          {{ v.metafields.custom.descrizione_variante | metafield_text }}
+                                      </div>
+                                  </div>
+                              </collapsible-section>
+                            {%- endif -%}
+                            
+                            {%- comment -%} VASETTO SIGILLATO {%- endcomment -%}
+                            {%- if v.metafields.custom.titolo_vasetto_sigillato != blank and v.metafields.custom.vasetto_sigillato != blank -%}
+                              <collapsible-section
+                                  class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+                                  data-accordion-set="pdp"
+                                  data-toggle-tabindex="button, [href], input, select"
+                              >
+                                  <div
+                                      class="wt-collapse__trigger"
+                                      role="button"
+                                      tabindex="0"
+                                      data-open="false"
+                                      aria-expanded="false"
+                                      aria-controls="CollapsibleGiftpack-vasetto-{{ block.id }}"
+                                  >
+                                      <div class="wt-collapse__trigger__text">
+                                          <span class="wt-collapse__trigger__title" data-giftpack-title="vasetto">
+                                              {{ v.metafields.custom.titolo_vasetto_sigillato }}
+                                          </span>
+                                      </div>
+                                      <div class="wt-icon" aria-hidden="true">
+                                          {% render 'icons', id: 'plus' %}
+                                      </div>
+                                  </div>
+                                  <div class="wt-collapse__target" id="CollapsibleGiftpack-vasetto-{{ block.id }}">
+                                      <div class="wt-collapse__target--text rte" data-giftpack-content="vasetto">
+                                          {{ v.metafields.custom.vasetto_sigillato | metafield_text }}
+                                      </div>
+                                  </div>
+                              </collapsible-section>
+                            {%- endif -%}
+                            
+                            {%- comment -%} SCATOLA MATITE {%- endcomment -%}
+                            {%- if v.metafields.custom.scatola_matite != blank -%}
+                              <collapsible-section
+                                  class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+                                  data-accordion-set="pdp"
+                                  data-toggle-tabindex="button, [href], input, select"
+                              >
+                                  <div
+                                      class="wt-collapse__trigger"
+                                      role="button"
+                                      tabindex="0"
+                                      data-open="false"
+                                      aria-expanded="false"
+                                      aria-controls="CollapsibleGiftpack-matite-{{ block.id }}"
+                                  >
+                                      <div class="wt-collapse__trigger__text">
+                                          <span class="wt-collapse__trigger__title">1 scatola matite di cioccolato fondente e nocciola – 60 g</span>
+                                      </div>
+                                      <div class="wt-icon" aria-hidden="true">
+                                          {% render 'icons', id: 'plus' %}
+                                      </div>
+                                  </div>
+                                  <div class="wt-collapse__target" id="CollapsibleGiftpack-matite-{{ block.id }}">
+                                      <div class="wt-collapse__target--text rte" data-giftpack-content="matite">
+                                          {{ v.metafields.custom.scatola_matite | metafield_text }}
+                                      </div>
+                                  </div>
+                              </collapsible-section>
+                            {%- endif -%}
+                            
+                            {%- comment -%} JSON con tutti i dati delle varianti per aggiornamento dinamico {%- endcomment -%}
+                            <script type="application/json" id="giftpack-variant-data-{{ section.id }}">
+                              {
+                                {%- for variant in product.variants -%}
+                                  "{{ variant.id }}": {
+                                    "descrizione": {{ variant.metafields.custom.descrizione_variante | metafield_text | json }},
+                                    "titoloVasetto": {{ variant.metafields.custom.titolo_vasetto_sigillato | json }},
+                                    "vasetto": {{ variant.metafields.custom.vasetto_sigillato | metafield_text | json }},
+                                    "matite": {{ variant.metafields.custom.scatola_matite | metafield_text | json }}
+                                  }{% unless forloop.last %},{% endunless %}
+                                {%- endfor -%}
+                              }
+                            </script>
                         {%- when 'custom_option' -%}
                             {% assign options = block.settings.options | newline_to_br | split: '<br />' %}
 
@@ -1688,6 +1689,88 @@
                     {%- endfor -%}
                 </div>
             </section>
+
+            {%- comment -%} Script per aggiornare i metafield al cambio variante {%- endcomment -%}
+            <script>
+              (function() {
+                const sectionId = '{{ section.id }}';
+                let giftpackData = null;
+
+                // Carica i dati
+                function loadGiftpackData() {
+                  const dataEl = document.getElementById('giftpack-variant-data-' + sectionId);
+                  if (dataEl) {
+                    try {
+                      giftpackData = JSON.parse(dataEl.textContent);
+                    } catch(e) {
+                      console.error('Error loading giftpack data:', e);
+                    }
+                  }
+                }
+
+                // Aggiorna i contenuti
+                function updateGiftpackContent(variantId) {
+                  if (!giftpackData) return;
+                  
+                  const data = giftpackData[String(variantId)];
+                  if (!data) return;
+
+                  // Aggiorna descrizione
+                  const descEl = document.querySelector('[data-giftpack-content="descrizione"]');
+                  if (descEl && data.descrizione) {
+                    descEl.innerHTML = data.descrizione;
+                  }
+
+                  // Aggiorna titolo vasetto
+                  const titleEl = document.querySelector('[data-giftpack-title="vasetto"]');
+                  if (titleEl && data.titoloVasetto) {
+                    titleEl.textContent = data.titoloVasetto;
+                  }
+
+                  // Aggiorna contenuto vasetto
+                  const vasettoEl = document.querySelector('[data-giftpack-content="vasetto"]');
+                  if (vasettoEl && data.vasetto) {
+                    vasettoEl.innerHTML = data.vasetto;
+                  }
+
+                  // Aggiorna matite
+                  const matiteEl = document.querySelector('[data-giftpack-content="matite"]');
+                  if (matiteEl && data.matite) {
+                    matiteEl.innerHTML = data.matite;
+                  }
+                }
+
+                // Inizializza
+                loadGiftpackData();
+
+                // Ascolta evento del tema
+                document.addEventListener('variantChangeEnd', function() {
+                  const form = document.querySelector('form[action*="/cart/add"]');
+                  if (form) {
+                    const input = form.querySelector('input[name="id"]');
+                    if (input && input.value) {
+                      updateGiftpackContent(input.value);
+                    }
+                  }
+                });
+
+                // Listener su variant-options
+                const variantOptions = document.querySelector('variant-options');
+                if (variantOptions) {
+                  variantOptions.addEventListener('change', function() {
+                    setTimeout(function() {
+                      const form = document.querySelector('form[action*="/cart/add"]');
+                      if (form) {
+                        const input = form.querySelector('input[name="id"]');
+                        if (input && input.value) {
+                          updateGiftpackContent(input.value);
+                        }
+                      }
+                    }, 50);
+                  });
+                }
+              })();
+            </script>
 
             <sticky-buy-button class="wt-product__sticky-buy">
                 <button
